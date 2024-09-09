@@ -14,6 +14,7 @@ import {BlurView} from '@react-native-community/blur';
 import styles from './styles';
 import {useFocusEffect} from '@react-navigation/native'; // For handling screen focus
 import fonts from '../../constants/fonts';
+import { images } from '../../assets/images';
 
 const {width} = Dimensions.get('window');
 
@@ -68,7 +69,7 @@ const CouponsData = [
   {
     id: '1',
     name: 'Invite your peers & earn \n up to 2% of their tips  for life',
-    image: require('../../assets/images/arrow.png'),
+    image: require(images.arrow),
   },
   {
     id: '2',
@@ -127,7 +128,7 @@ const DashboardScreen = ({navigation, route}) => {
         <View style={styles.nameImage}>
           <View style={styles.imageAvatar}>
             <Image
-              source={require('../../assets/images/userImage.png')}
+              source={require(images.userImage)}
               style={styles.imageAvatar}
             />
           </View>
@@ -135,7 +136,7 @@ const DashboardScreen = ({navigation, route}) => {
         </View>
         <View style={styles.notificationImageContainer}>
           <Image
-            source={require('../../assets/images/notification.png')}
+            source={require(images.notification)}
             style={styles.notificationImage}
           />
         </View>
@@ -143,15 +144,15 @@ const DashboardScreen = ({navigation, route}) => {
 
       {/* ImageBackground with Texts and Eye Icon */}
       <ImageBackground
-        source={require('../../assets/images/cardPricing.png')}
+        source={require(images.cardContentImage)}
         resizeMode="contain"
         style={styles.cardImage}>
         <TouchableOpacity onPress={toggleBlur} style={styles.eyeIconWrapper}>
           <Image
             source={
               !isBlurred
-                ? require('../../assets/images/eyeIcon.png')
-                : require('../../assets/images/eyeIconHide.png')
+                ? require(images.eyeIcon)
+                : require(images.eyeIconHide)
             }
             style={styles.eyeIcon}
             resizeMode="contain"
@@ -195,7 +196,7 @@ const DashboardScreen = ({navigation, route}) => {
       <View style={styles.peopleRow}>
         <TouchableOpacity>
           <Image
-            source={require('../../assets/images/inviteandearn.png')}
+            source={require(images.inviteAndEarn)}
             resizeMode="contain"
             style={styles.earnStyle}
           />
@@ -226,7 +227,7 @@ const DashboardScreen = ({navigation, route}) => {
       </View>
 
       <ImageBackground
-        source={require('../../assets/images/frame2.png')}
+        source={require(images.frame2)}
         resizeMode="cover"
         style={styles.discountBannerBgImage}
           >

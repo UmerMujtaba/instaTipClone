@@ -5,6 +5,8 @@ import CustomTextInput from '../../components/textFields';
 import LinearGradient from 'react-native-linear-gradient';
 
 import Strings from '../../constants/strings';
+import { images } from '../../assets/images';
+
 
 const RegisterationScreen = ({navigation}) => {
   const [name, setName] = useState('');
@@ -33,7 +35,7 @@ const RegisterationScreen = ({navigation}) => {
               value={name}
               onChangeText={setName}
               placeholder="Name"
-              imageSource={require('../../assets/images/user.png')}
+              imageSource={require(images.userOutlinedIcon)}
               keyboardType="default"
               suffixIconStyle={{width: 24, height: 26.4}}
               rightIcon
@@ -46,7 +48,7 @@ const RegisterationScreen = ({navigation}) => {
               value={surName}
               onChangeText={setSurName}
               placeholder="Surname"
-              imageSource={require('../../assets/images/user.png')}
+              imageSource={require(images.userOutlinedIcon)}
               keyboardType="default"
               suffixIconStyle={{width: 24, height: 26.4}}
               rightIcon
@@ -58,7 +60,7 @@ const RegisterationScreen = ({navigation}) => {
               value={email}
               onChangeText={setEmail}
               placeholder="Email"
-              imageSource={require('../../assets/images/emailIcon.png')}
+              imageSource={require(images.emailIcon)}
               keyboardType="email-address"
               suffixIconStyle={{width: 24, height: 26.4}}
               rightIcon
@@ -68,7 +70,7 @@ const RegisterationScreen = ({navigation}) => {
               value={phoneNo}
               onChangeText={setPhoneNo}
               placeholder="Phone Number"
-              imageSource={require('../../assets/images/smartphone.png')}
+              imageSource={require(images.phoneIcon)}
               keyboardType="phone-pad"
               suffixIconStyle={{width: 24, height: 26.4}} // Style for email icon
               rightIcon
@@ -78,14 +80,14 @@ const RegisterationScreen = ({navigation}) => {
               value={password}
               onChangeText={setPassword}
               placeholder="Strong Password"
-              suffixIcon={require('../../assets/images/eyeIcon.png')}
+              suffixIcon={require(images.eyeIcon)}
               keyboardType="default"
               secureTextEntry={isSecureCheck ? true : false}
               suffixIconStyle={{width: 24, height: 26.4}}
               eyeSource={
                 isSecureCheck
-                  ? require('../../assets/images/eyeIcon.png')
-                  : require('../../assets/images/eyeIconHide.png')
+                  ? require(images.eyeIcon)
+                  : require(images.eyeIconHide)
               }
               eye
               eyePress={() => setIsSecureCheck(!isSecureCheck)}
@@ -97,8 +99,8 @@ const RegisterationScreen = ({navigation}) => {
               placeholder="Repeat Password"
               eyeSource={
                 isSecure
-                  ? require('../../assets/images/eyeIcon.png')
-                  : require('../../assets/images/eyeIconHide.png')
+                ? require(images.eyeIcon)
+                : require(images.eyeIconHide)
               }
               keyboardType="default"
               secureTextEntry={isSecure ? true : false}

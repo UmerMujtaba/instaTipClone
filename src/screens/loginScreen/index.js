@@ -4,6 +4,8 @@ import LinearGradient from 'react-native-linear-gradient';
 import Strings from '../../constants/strings';
 import styles from './styles';
 import CustomTextInput from '../../components/textFields';
+import { images } from '../../assets/images';
+
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -16,7 +18,7 @@ const LoginScreen = ({navigation}) => {
         style={styles.backImageContainer}
         onPress={() => navigation.goBack()}>
         <Image
-          source={require('../../assets/images/backIcon.png')}
+          source={require(images.backIcon)}
           style={styles.backImage}
           resizeMode="contain"
         />
@@ -32,7 +34,7 @@ const LoginScreen = ({navigation}) => {
             value={email}
             onChangeText={setEmail}
             placeholder="Email"
-            suffixIcon={require('../../assets/images/emailIcon.png')}
+            suffixIcon={require(images.emailIcon)}
             keyboardType="email-address"
             suffixIconStyle={{ width: 24, height: 26.4 }} 
             
@@ -42,8 +44,8 @@ const LoginScreen = ({navigation}) => {
             value={password}
             onChangeText={setPassword}
             placeholder="Password"
-            suffixIcon={require('../../assets/images/eyeIcon.png')}
-            keyboardType="email-address"
+            suffixIcon={require(images.eyeIcon)}
+            keyboardType="default"
             secureTextEntry
             suffixIconStyle={{ width: 24, height: 26.4 }} 
           />
@@ -76,27 +78,27 @@ const LoginScreen = ({navigation}) => {
           </TouchableOpacity>
 
           <View style={styles.lineRow}>
-            <Image source={require('../../assets/images/Line2.png')} />
+            <Image source={require(images.line2)} />
             <Text style={styles.lineBtwnText}>Or log in with</Text>
-            <Image source={require('../../assets/images/Line2.png')} />
+            <Image source={require(images.line2)} />
           </View>
 
           <View style={styles.socialMediaIcons}>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={require('../../assets/images/apple.png')}
+                source={require(images.appleLogo)}
                 style={styles.logoStyle}
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={require('../../assets/images/facebook.png')}
+                source={require(images.facebookLogo)}
                 style={[styles.logoStyle, styles.logoStyle2]}
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={require('../../assets/images/gmail.png')}
+                source={require(images.googleLogo)}
                 style={[styles.logoStyle, styles.logoStyle3]}
               />
             </TouchableOpacity>

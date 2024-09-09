@@ -14,6 +14,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import data from '../../utils/startScreenData';
 import Strings from '../../constants/strings';
 
+import { images } from '../../assets/images';
 const {width} = Dimensions.get('window');
 
 const renderItem3 = ({item}) => {
@@ -34,7 +35,7 @@ const FirstScreen = ({navigation}) => {
     <View style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" />
       <Image
-        source={require('../../assets/images/Frame.png')}
+        source={require(images.frame)}
         style={styles.frame}
       />
 
@@ -71,9 +72,9 @@ const FirstScreen = ({navigation}) => {
       </TouchableOpacity>
 
       <View style={styles.lineRow}>
-        <Image source={require('../../assets/images/line.png')} />
+        <Image source={require(images.line)} />
         <Text style={styles.lineBtwnText}>Or</Text>
-        <Image source={require('../../assets/images/line.png')} />
+        <Image source={require(images.line)} />
       </View>
 
       <View style={styles.loginText}>
