@@ -18,7 +18,7 @@ const LoginScreen = ({navigation}) => {
         style={styles.backImageContainer}
         onPress={() => navigation.goBack()}>
         <Image
-          source={require(images.backIcon)}
+          source={images.backIcon}
           style={styles.backImage}
           resizeMode="contain"
         />
@@ -26,7 +26,7 @@ const LoginScreen = ({navigation}) => {
 
       <View style={styles.body}>
         <Image
-          source={require('../../assets/images/logo.png')}
+          source={images.appLogo}
           style={styles.logoImage}
         />
         <View style={styles.mainContent}>
@@ -34,7 +34,7 @@ const LoginScreen = ({navigation}) => {
             value={email}
             onChangeText={setEmail}
             placeholder="Email"
-            suffixIcon={require(images.emailIcon)}
+            suffixIcon={images.emailIcon}
             keyboardType="email-address"
             suffixIconStyle={{ width: 24, height: 26.4 }} 
             
@@ -44,7 +44,7 @@ const LoginScreen = ({navigation}) => {
             value={password}
             onChangeText={setPassword}
             placeholder="Password"
-            suffixIcon={require(images.eyeIcon)}
+            suffixIcon={images.eyeIcon}
             keyboardType="default"
             secureTextEntry
             suffixIconStyle={{ width: 24, height: 26.4 }} 
@@ -78,27 +78,27 @@ const LoginScreen = ({navigation}) => {
           </TouchableOpacity>
 
           <View style={styles.lineRow}>
-            <Image source={require(images.line2)} />
+            <Image source={images.line2} />
             <Text style={styles.lineBtwnText}>Or log in with</Text>
-            <Image source={require(images.line2)} />
+            <Image source={images.line2} />
           </View>
 
           <View style={styles.socialMediaIcons}>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={require(images.appleLogo)}
+                source={images.appleLog}
                 style={styles.logoStyle}
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={require(images.facebookLogo)}
+                source={images.facebookLog}
                 style={[styles.logoStyle, styles.logoStyle2]}
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={require(images.googleLogo)}
+                source={images.googleLog}
                 style={[styles.logoStyle, styles.logoStyle3]}
               />
             </TouchableOpacity>

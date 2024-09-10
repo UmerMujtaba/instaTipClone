@@ -11,7 +11,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     flex: 1,
   },
-  frame: {
+  frameStyle: {
     position: 'absolute',
     width: '100%',
     height: '100%',

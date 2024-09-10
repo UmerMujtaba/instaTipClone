@@ -29,37 +29,37 @@ const peopleData = [
   {
     id: '1',
     name: 'Name',
-    image: require('../../assets/images/user3.png'),
+    image:  ('../../assets/images/user3.png'),
     value: '€0',
   },
   {
     id: '2',
     name: 'Name',
-    image: require('../../assets/images/user3.png'),
+    image:  ('../../assets/images/user3.png'),
     value: '€5',
   },
   {
     id: '3',
     name: 'Name',
-    image: require('../../assets/images/user3.png'),
+    image:  ('../../assets/images/user3.png'),
     value: '€10',
   },
   {
     id: '4',
     name: 'Name',
-    image: require('../../assets/images/user3.png'),
+    image:  ('../../assets/images/user3.png'),
     value: '€0',
   },
   {
     id: '5',
     name: 'Name',
-    image: require('../../assets/images/user3.png'),
+    image:  ('../../assets/images/user3.png'),
     value: '€5',
   },
   {
     id: '6',
     name: 'Name',
-    image: require('../../assets/images/user3.png'),
+    image:  ('../../assets/images/user3.png'),
     value: '€10',
   },
   // Add more data as needed
@@ -69,7 +69,7 @@ const CouponsData = [
   {
     id: '1',
     name: 'Invite your peers & earn \n up to 2% of their tips  for life',
-    image: require(images.arrow),
+    image:  (images.arrowImage),
   },
   {
     id: '2',
@@ -128,7 +128,7 @@ const DashboardScreen = ({navigation, route}) => {
         <View style={styles.nameImage}>
           <View style={styles.imageAvatar}>
             <Image
-              source={require(images.userImage)}
+        source={images.userImage}
               style={styles.imageAvatar}
             />
           </View>
@@ -136,7 +136,7 @@ const DashboardScreen = ({navigation, route}) => {
         </View>
         <View style={styles.notificationImageContainer}>
           <Image
-            source={require(images.notification)}
+            source={images.notification}
             style={styles.notificationImage}
           />
         </View>
@@ -144,15 +144,15 @@ const DashboardScreen = ({navigation, route}) => {
 
       {/* ImageBackground with Texts and Eye Icon */}
       <ImageBackground
-        source={require(images.cardContentImage)}
+        source={images.cardContentImage}
         resizeMode="contain"
         style={styles.cardImage}>
         <TouchableOpacity onPress={toggleBlur} style={styles.eyeIconWrapper}>
           <Image
             source={
               !isBlurred
-                ? require(images.eyeIcon)
-                : require(images.eyeIconHide)
+                ?  images.eyeIcon
+                :  images.eyeIconHide
             }
             style={styles.eyeIcon}
             resizeMode="contain"
@@ -196,7 +196,7 @@ const DashboardScreen = ({navigation, route}) => {
       <View style={styles.peopleRow}>
         <TouchableOpacity>
           <Image
-            source={require(images.inviteAndEarn)}
+            source={ images.inviteAndEarn}
             resizeMode="contain"
             style={styles.earnStyle}
           />
@@ -227,7 +227,7 @@ const DashboardScreen = ({navigation, route}) => {
       </View>
 
       <ImageBackground
-        source={require(images.frame2)}
+        source={ images.frame2}
         resizeMode="cover"
         style={styles.discountBannerBgImage}
           >

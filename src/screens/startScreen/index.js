@@ -35,8 +35,8 @@ const FirstScreen = ({navigation}) => {
     <View style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" />
       <Image
-        source={require(images.frame)}
-        style={styles.frame}
+        source={ images.frame}
+        style={styles.frameStyle}
       />
 
       <View style={styles.carouselWrapper}>
@@ -72,9 +72,9 @@ const FirstScreen = ({navigation}) => {
       </TouchableOpacity>
 
       <View style={styles.lineRow}>
-        <Image source={require(images.line)} />
+        <Image source={ images.line} />
         <Text style={styles.lineBtwnText}>Or</Text>
-        <Image source={require(images.line)} />
+        <Image source={ images.line} />
       </View>
 
       <View style={styles.loginText}>

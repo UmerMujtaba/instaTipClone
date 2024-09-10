@@ -35,7 +35,7 @@ const RegisterationScreen = ({navigation}) => {
               value={name}
               onChangeText={setName}
               placeholder="Name"
-              imageSource={require(images.userOutlinedIcon)}
+              imageSource={images.userOutlinedIcon}
               keyboardType="default"
               suffixIconStyle={{width: 24, height: 26.4}}
               rightIcon
@@ -48,7 +48,7 @@ const RegisterationScreen = ({navigation}) => {
               value={surName}
               onChangeText={setSurName}
               placeholder="Surname"
-              imageSource={require(images.userOutlinedIcon)}
+              imageSource={images.userOutlinedIcon}
               keyboardType="default"
               suffixIconStyle={{width: 24, height: 26.4}}
               rightIcon
@@ -60,7 +60,7 @@ const RegisterationScreen = ({navigation}) => {
               value={email}
               onChangeText={setEmail}
               placeholder="Email"
-              imageSource={require(images.emailIcon)}
+              imageSource={images.emailIcon}
               keyboardType="email-address"
               suffixIconStyle={{width: 24, height: 26.4}}
               rightIcon
@@ -70,7 +70,7 @@ const RegisterationScreen = ({navigation}) => {
               value={phoneNo}
               onChangeText={setPhoneNo}
               placeholder="Phone Number"
-              imageSource={require(images.phoneIcon)}
+              imageSource={images.phoneIcon}
               keyboardType="phone-pad"
               suffixIconStyle={{width: 24, height: 26.4}} // Style for email icon
               rightIcon
@@ -80,14 +80,14 @@ const RegisterationScreen = ({navigation}) => {
               value={password}
               onChangeText={setPassword}
               placeholder="Strong Password"
-              suffixIcon={require(images.eyeIcon)}
+              suffixIcon={images.eyeIcon}
               keyboardType="default"
               secureTextEntry={isSecureCheck ? true : false}
               suffixIconStyle={{width: 24, height: 26.4}}
               eyeSource={
                 isSecureCheck
-                  ? require(images.eyeIcon)
-                  : require(images.eyeIconHide)
+                  ? images.eyeIcon
+                  : images.eyeIconHide
               }
               eye
               eyePress={() => setIsSecureCheck(!isSecureCheck)}
@@ -99,8 +99,8 @@ const RegisterationScreen = ({navigation}) => {
               placeholder="Repeat Password"
               eyeSource={
                 isSecure
-                ? require(images.eyeIcon)
-                : require(images.eyeIconHide)
+                ? images.eyeIcon
+                : images.eyeIconHide
               }
               keyboardType="default"
               secureTextEntry={isSecure ? true : false}

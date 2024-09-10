@@ -2,60 +2,104 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/fonts/Inter-ExtraBold.ttf",
-      "sha1": "e4d712ef0e61b3104b2327fe127d95d281a49308"
+      "path": "src/assets/images/Frame.png",
+      "sha1": "bc8389230b104c897fef437f4b3b50774fdafea3"
     },
     {
-      "path": "src/assets/fonts/Inter-Italic.ttf",
-      "sha1": "81cca19cd01dbcfea3826e02cc1491ff7423c2b1"
+      "path": "src/assets/images/Line2.png",
+      "sha1": "5c3ae7cf33318b69ed56a07aef7aa8b4d93e01f6"
     },
     {
-      "path": "src/assets/fonts/Inter-Light.ttf",
-      "sha1": "ca9d1cbe741fb0ad6f9e469f2b390a79629d10ad"
+      "path": "src/assets/images/appLogo.png",
+      "sha1": "d1b5035cc7d6a25988a44316bd4163115f809986"
     },
     {
-      "path": "src/assets/fonts/Inter-VariableFont.ttf",
-      "sha1": "ee5c2e22ffeddefc433c9aa4c76779bb73a5c682"
+      "path": "src/assets/images/apple.png",
+      "sha1": "4751b7548b392f47ae1f52d53cf1f208a35fb64f"
     },
     {
-      "path": "src/assets/fonts/Outfit-Black.ttf",
-      "sha1": "51e4964fd4b0072e2f90fd3b1d9883a142130e74"
+      "path": "src/assets/images/arrow.png",
+      "sha1": "7bef4e64362ecf10916a4115de61ef2d030d1fff"
     },
     {
-      "path": "src/assets/fonts/Outfit-Bold.ttf",
-      "sha1": "dd5f4206d22d8b093a53a2f6423ed532fd656aeb"
+      "path": "src/assets/images/backIcon.png",
+      "sha1": "e77fac4d635d86f755963ebe84777b6af793904d"
     },
     {
-      "path": "src/assets/fonts/Outfit-ExtraBold.ttf",
-      "sha1": "89c8a2a10ed63a324be105656649546f0be6d8a1"
+      "path": "src/assets/images/cardPricing.png",
+      "sha1": "17a31fe85636c0702a5538f2fd90de987221b94c"
     },
     {
-      "path": "src/assets/fonts/Outfit-ExtraLight.ttf",
-      "sha1": "848a413a4d79c8bff066416dfa3771485d0c4ec9"
+      "path": "src/assets/images/emailIcon.png",
+      "sha1": "6c4fba5d5342d9b56a7952fd6c615641dea1a7cd"
     },
     {
-      "path": "src/assets/fonts/Outfit-Light.ttf",
-      "sha1": "77822e4eba7d32622113003e21b0d17ed7a8f528"
+      "path": "src/assets/images/eyeIcon.png",
+      "sha1": "0223e093c3cc17d71a0d9bc96ab7522d15f1f4f4"
     },
     {
-      "path": "src/assets/fonts/Outfit-Medium.ttf",
-      "sha1": "accdc4a94720336a48bb6fd31759bbfa268f902e"
+      "path": "src/assets/images/eyeIconHide.png",
+      "sha1": "58376b5460911281c5f12fc69a4c41fc55aef1d9"
     },
     {
-      "path": "src/assets/fonts/Outfit-Regular.ttf",
-      "sha1": "7724dc42adf3e8caa9a1f7f64bc02016f201f550"
+      "path": "src/assets/images/facebook.png",
+      "sha1": "f7068beee96b31babda6ad3d0d7fc78ba284711c"
     },
     {
-      "path": "src/assets/fonts/Outfit-SemiBold.ttf",
-      "sha1": "8e01f823ad73ea02ad96c676497c3e050d6e9e90"
+      "path": "src/assets/images/frame2.png",
+      "sha1": "be9232ace5356b95aa576ba28f10e576996b5009"
     },
     {
-      "path": "src/assets/fonts/Outfit-Thin.ttf",
-      "sha1": "09459262264acfe2f30db5fcf2de63e6115449b6"
+      "path": "src/assets/images/gmail.png",
+      "sha1": "d2ae8586fe9acb0876cd7eed2e07dde1fba54c5d"
     },
     {
-      "path": "src/assets/fonts/Outfit.ttf",
-      "sha1": "0b864532623abe9e381ab191b4eb66021db9829d"
+      "path": "src/assets/images/index.js",
+      "sha1": "0386ffc4f351a341a6a6893036ac1016a8717318"
+    },
+    {
+      "path": "src/assets/images/inviteandearn.png",
+      "sha1": "41bd7e8614059c0e1be2374e34f40df24d9eeb70"
+    },
+    {
+      "path": "src/assets/images/jar.png",
+      "sha1": "e44c83020f169e29188397e522e625e6adcb8d4e"
+    },
+    {
+      "path": "src/assets/images/line.png",
+      "sha1": "c3922a57e233de528a6787fe01a6635b35074113"
+    },
+    {
+      "path": "src/assets/images/meeting.png",
+      "sha1": "60fd095e57c5f120cdc9cb9dd896bacba312df62"
+    },
+    {
+      "path": "src/assets/images/note.png",
+      "sha1": "43e4680870685a239e75f5d783aee31ad0361218"
+    },
+    {
+      "path": "src/assets/images/notification.png",
+      "sha1": "fa0e896d0f1eb53badcb6952beb133d691766253"
+    },
+    {
+      "path": "src/assets/images/people.png",
+      "sha1": "bb963c5060e17d3b0a3390ec2db92502a8e76f2b"
+    },
+    {
+      "path": "src/assets/images/smartphone.png",
+      "sha1": "5978757cc18049c1bbe48b8b6347e59af6450cfb"
+    },
+    {
+      "path": "src/assets/images/user.png",
+      "sha1": "3398f4db305b375b3d9332b4fe00edeafe86113b"
+    },
+    {
+      "path": "src/assets/images/user3.png",
+      "sha1": "d470fd6cc64a215e07aa33ee670f40b898ca8691"
+    },
+    {
+      "path": "src/assets/images/userImage.png",
+      "sha1": "03eeb2f8c79d5c93a35b90f049e2b0f08f33206a"
     }
   ]
 }
