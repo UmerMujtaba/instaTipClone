@@ -4,8 +4,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Strings from '../../constants/strings';
 import styles from './styles';
 import CustomTextInput from '../../components/textFields';
-import { images } from '../../assets/images';
-
+import {images} from '../../assets/images';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -25,10 +24,7 @@ const LoginScreen = ({navigation}) => {
       </TouchableOpacity>
 
       <View style={styles.body}>
-        <Image
-          source={images.apllicationLogo}
-          style={styles.logoImage}
-        />
+        <Image source={images.apllicationLogo} style={styles.logoImage} />
         <View style={styles.mainContent}>
           <CustomTextInput
             value={email}
@@ -36,8 +32,7 @@ const LoginScreen = ({navigation}) => {
             placeholder="Email"
             suffixIcon={images.emailIcon}
             keyboardType="email-address"
-            suffixIconStyle={{ width: 24, height: 26.4 }} 
-            
+            suffixIconStyle={{width: 24, height: 26.4}}
           />
 
           <CustomTextInput
@@ -47,7 +42,7 @@ const LoginScreen = ({navigation}) => {
             suffixIcon={images.eyeIcon}
             keyboardType="default"
             secureTextEntry
-            suffixIconStyle={{ width: 24, height: 26.4 }} 
+            suffixIconStyle={{width: 24, height: 26.4}}
           />
 
           <View style={styles.forgotPassword}>
@@ -85,10 +80,7 @@ const LoginScreen = ({navigation}) => {
 
           <View style={styles.socialMediaIcons}>
             <TouchableOpacity style={styles.icons}>
-              <Image
-                source={images.appleLogo}
-                style={styles.logoStyle}
-              />
+              <Image source={images.appleLogo} style={styles.logoStyle} />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>
               <Image
@@ -106,10 +98,12 @@ const LoginScreen = ({navigation}) => {
         </View>
         {/* <View style={{backgroundColor:"red",flex:1}}/> */}
 
-        <TouchableOpacity style={styles.footer}>
+        <View style={styles.footer}>
           <Text style={styles.footerText1}>{Strings.termsTxt}</Text>
-          <Text style={styles.footerText2}>Privacy Policy</Text>
-        </TouchableOpacity>
+          <TouchableOpacity>
+            <Text style={styles.footerText2}>Privacy Policy</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

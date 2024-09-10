@@ -50,19 +50,12 @@ const Tabs = () => (
     screenOptions={{
       tabBarStyle: {
         backgroundColor: '#2F455C',
-        borderTopRightRadius: 22,
+        borderTopRightRadius: 16,
         position: 'absolute',
-        borderTopLeftRadius: 22,
+        borderTopLeftRadius: 16,
         borderTopWidth: 0,
         height: 65,
-        
-          tabBarShowLabel: false,
-          tabBarStyle: [
-            {
-              "display": "flex"
-            },
-            null
-          ]
+      
         
       },
     }}

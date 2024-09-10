@@ -32,7 +32,7 @@ export default StyleSheet.create({
   logoImage: {
     width: 171,
     height: 62.4,
-    marginBottom: 50,
+    marginBottom: 90,
   },
   mainContent: {
     
@@ -84,15 +84,16 @@ export default StyleSheet.create({
   },
 
   registerButton: {
-    marginTop: 30,
+    marginTop: 15,
     width: 330,
-    height: 50,
+    height: 45,
     borderRadius: 5,
     justifyContent: 'center',
   },
   buttonText: {
     color: '#213142',
    // fontWeight: 'bold',
+  
     fontSize: 20,
     textAlign: 'center',
     fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
@@ -101,7 +102,7 @@ export default StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingVertical: 10,
+    paddingVertical: 5,
     width: '100%',
     height: '100%',
   },
@@ -147,7 +148,7 @@ export default StyleSheet.create({
     height: 16.67,
   },
   footer: {
-    marginTop: '42%',
+    marginTop: '35%',
     //backgroundColor: 'red',
     // bottom: 20,
     // width: '100%',

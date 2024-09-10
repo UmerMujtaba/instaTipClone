@@ -24,7 +24,7 @@ const RegisterationScreen = ({navigation}) => {
   const ref_input4 = useRef();
   const ref_input5 = useRef();
   return (
-    <ScrollView style={styles.scrollView}>
+    // <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
         <View style={styles.mainBody}>
           <Text style={styles.startedText}>Get started</Text>
@@ -123,7 +123,7 @@ const RegisterationScreen = ({navigation}) => {
             </View>
             <TouchableOpacity
               style={styles.registerButton}
-              onPress={() => navigation.navigate('Dashboard')}>
+              onPress={() => navigation.navigate('Login')}>
               <LinearGradient
                 start={{x: 0.0, y: 0.5}}
                 end={{x: 1.0, y: 0.5}}
@@ -142,7 +142,7 @@ const RegisterationScreen = ({navigation}) => {
           </View>
         </View>
       </View>
-    </ScrollView>
+    // </ScrollView>
   );
 };
 
