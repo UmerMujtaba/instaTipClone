@@ -190,7 +190,6 @@ export default StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     color: '#FFFFFF',
-    
   }),
 
   paginationCuponWrapper: {
@@ -208,5 +207,107 @@ export default StyleSheet.create({
   },
   CuponactiveDot: {
     backgroundColor: '#1DCDFE',
+  },
+
+  chartContainerHeader: {
+    flexDirection: 'row',
+    //backgroundColor: 'skyblue',
+    width: 'auto',
+    height: 45,
+    justifyContent: 'space-between',
+    marginTop: 10,
+  },
+
+  avgValueAndGraph: {
+    //backgroundColor: 'green',
+    width: width / 2,
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    flexDirection: 'row',
+  },
+
+  topGraphColumn: {
+    //backgroundColor: 'brown',
+    width: 60,
+    flexDirection: 'column',
+  },
+
+  topGraphValue: {
+    fontFamily: fonts.SF_PRO_TEXT.inter.ExtraBold,
+    //fontSize: 15,
+    //textAlign: 'center',
+  },
+  topGraphText: {
+    fontFamily: fonts.SF_PRO_TEXT.Outfit.Regular,
+    //fontSize: 15,
+  },
+  graphBg: {
+    marginTop: 5,
+    backgroundColor: '#2F455C',
+    width: 'auto',
+    height: 5,
+    borderRadius: 8,
+  },
+  graphAbove: {
+    backgroundColor: '#29E2E0',
+    width: 50,
+    height: 5,
+    borderRadius: 8,
+  },
+  graphAboveSecond: {
+    backgroundColor: '#29E2E0',
+    width: 30,
+    height: 5,
+    borderRadius: 8,
+  },
+  DropDownContainer: {
+    // backgroundColor: 'orange',
+    // width: width / 3,
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 45,
+  },
+  barGraphConatiner: {
+    //backgroundColor: 'red',
+    width: 'auto',
+    height: 160,
+    flexDirection: 'row',
+  },
+
+  //graph flat list
+  chartContainer: {
+    marginTop: 10,
+    marginLeft: 10,
+    height: 215,
+    width: width - 20,
+    //backgroundColor: 'pink',
+    borderRadius: 12,
+  },
+
+  flatListContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-end', // Align items to the bottom if needed
+  },
+  itemContainer: {
+    flexDirection: 'column',
+    paddingLeft: 10,
+    //width: 32,
+    //height: 'auto',
+    justifyContent: 'flex-end',
+  },
+  bar: {
+    backgroundColor: '#29E2E0',
+    width: 14,
+    alignSelf: 'center',
+    borderRadius: 8,
+  },
+  dateText: {
+    fontSize: 13,
+    textAlign: 'center',
+    marginTop: 5,
+  },
+  separator: {
+    width: 16, // Adjust the spacing between bars here
   },
 });

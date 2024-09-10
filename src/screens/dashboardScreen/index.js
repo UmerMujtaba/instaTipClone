@@ -14,7 +14,9 @@ import {BlurView} from '@react-native-community/blur';
 import styles from './styles';
 import {useFocusEffect} from '@react-navigation/native'; // For handling screen focus
 import fonts from '../../constants/fonts';
-import { images } from '../../assets/images';
+import {images} from '../../assets/images';
+import DropDownPicker from 'react-native-dropdown-picker';
+import {BarChart} from 'react-native-chart-kit';
 
 const {width} = Dimensions.get('window');
 
@@ -29,37 +31,37 @@ const peopleData = [
   {
     id: '1',
     name: 'Name',
-    image:  ('../../assets/images/user3.png'),
+    image: '../../assets/images/user3.png',
     value: '€0',
   },
   {
     id: '2',
     name: 'Name',
-    image:  ('../../assets/images/user3.png'),
+    image: '../../assets/images/user3.png',
     value: '€5',
   },
   {
     id: '3',
     name: 'Name',
-    image:  ('../../assets/images/user3.png'),
+    image: '../../assets/images/user3.png',
     value: '€10',
   },
   {
     id: '4',
     name: 'Name',
-    image:  ('../../assets/images/user3.png'),
+    image: '../../assets/images/user3.png',
     value: '€0',
   },
   {
     id: '5',
     name: 'Name',
-    image:  ('../../assets/images/user3.png'),
+    image: '../../assets/images/user3.png',
     value: '€5',
   },
   {
     id: '6',
     name: 'Name',
-    image:  ('../../assets/images/user3.png'),
+    image: '../../assets/images/user3.png',
     value: '€10',
   },
   // Add more data as needed
@@ -69,7 +71,7 @@ const CouponsData = [
   {
     id: '1',
     name: 'Invite your peers & earn \n up to 2% of their tips  for life',
-    image:  (images.arrowImage),
+    image: images.arrowImage,
   },
   {
     id: '2',
@@ -81,6 +83,16 @@ const CouponsData = [
   },
 ];
 
+const graphData = [
+  {id: '1', date: 'FEB 1', height: 120},
+  {id: '2', date: 'FEB 2', height: 80},
+  {id: '3', date: 'FEB 3', height: 50},
+  {id: '4', date: 'FEB 4', height: 70},
+  {id: '5', date: 'FEB 5', height: 40},
+  {id: '6', date: 'FEB 6', height: 90},
+  {id: '7', date: 'FEB 7', height: 100},
+];
+
 const DashboardScreen = ({navigation, route}) => {
   const [isBlurred, setIsBlurred] = useState(false);
   const [activeIndex, setActiveIndex] = useState(
@@ -89,6 +101,13 @@ const DashboardScreen = ({navigation, route}) => {
   const [cuponActiveIndex, setCuponActiveIndex] = useState(
     route.params?.cuponActiveIndex || 0,
   );
+  const [open, setOpen] = useState(false); // State to control dropdown visibility
+  const [value, setValue] = useState('daily'); // State to control selected value
+  const [items, setItems] = useState([
+    {label: 'Daily', value: 'daily'},
+    {label: 'Weekly', value: 'weekly'},
+    {label: 'Monthly', value: 'monthly'},
+  ]); // Items
 
   const toggleBlur = () => setIsBlurred(!isBlurred);
 
@@ -105,7 +124,6 @@ const DashboardScreen = ({navigation, route}) => {
     setCuponActiveIndex(index);
     navigation.setParams({cuponActiveIndex: index});
   };
-  
 
   useFocusEffect(
     useCallback(() => {
@@ -118,8 +136,12 @@ const DashboardScreen = ({navigation, route}) => {
     }, [route.params?.activeIndex, route.params?.cuponActiveIndex]),
   );
 
-
-
+  const renderItem = ({item}) => (
+    <View style={styles.itemContainer}>
+      <View style={[styles.bar, {height: item.height}]} />
+      <Text style={styles.dateText}>{item.date}</Text>
+    </View>
+  );
 
   return (
     <View style={styles.container}>
@@ -127,10 +149,7 @@ const DashboardScreen = ({navigation, route}) => {
       <View style={styles.appbarStyle}>
         <View style={styles.nameImage}>
           <View style={styles.imageAvatar}>
-            <Image
-        source={images.userImage}
-              style={styles.imageAvatar}
-            />
+            <Image source={images.userImages} style={styles.imageAvatar} />
           </View>
           <Text style={styles.nameText}>Hi, John</Text>
         </View>
@@ -149,11 +168,7 @@ const DashboardScreen = ({navigation, route}) => {
         style={styles.cardImage}>
         <TouchableOpacity onPress={toggleBlur} style={styles.eyeIconWrapper}>
           <Image
-            source={
-              !isBlurred
-                ?  images.eyeIcon
-                :  images.eyeIconHide
-            }
+            source={!isBlurred ? images.eyeIcon : images.eyeIconHide}
             style={styles.eyeIcon}
             resizeMode="contain"
           />
@@ -196,7 +211,7 @@ const DashboardScreen = ({navigation, route}) => {
       <View style={styles.peopleRow}>
         <TouchableOpacity>
           <Image
-            source={ images.inviteAndEarn}
+            source={images.inviteAndEarn}
             resizeMode="contain"
             style={styles.earnStyle}
           />
@@ -208,7 +223,7 @@ const DashboardScreen = ({navigation, route}) => {
           contentContainerStyle={styles.listContainer}
           showsHorizontalScrollIndicator={false}
           style={styles.flatListStyle}
-          renderItem={({ item }) => (
+          renderItem={({item}) => (
             <View style={styles.peopleContainer}>
               <View style={styles.peopleContainer2}>
                 <Image
@@ -227,10 +242,9 @@ const DashboardScreen = ({navigation, route}) => {
       </View>
 
       <ImageBackground
-        source={ images.frame2}
+        source={images.frame2}
         resizeMode="cover"
-        style={styles.discountBannerBgImage}
-          >
+        style={styles.discountBannerBgImage}>
         <FlatList
           data={CouponsData}
           keyExtractor={item => item.id}
@@ -240,16 +254,9 @@ const DashboardScreen = ({navigation, route}) => {
           showsHorizontalScrollIndicator={false}
           renderItem={({item, index}) => {
             return (
-              <View
-                style={
-                  styles.discountBanner
-               }>
+              <View style={styles.discountBanner}>
                 {item.image && (
-                  <Image
-                    style={styles.arrow}
-                  
-                    source={item.image}
-                  />
+                  <Image style={styles.arrow} source={item.image} />
                 )}
                 <Text style={styles.discountText(item.image)}>{item.name}</Text>
               </View>
@@ -257,19 +264,97 @@ const DashboardScreen = ({navigation, route}) => {
           }}
         />
 
-<View style={styles.paginationCuponWrapper}>
-    {CouponsData.map((_, index) => (
-      <View
-        key={index}
-        style={[
-          styles.Cupondot,
-          cuponActiveIndex === index && styles.activeDot,
-        ]}
-      />
-    ))}
-  </View>
-        
+        <View style={styles.paginationCuponWrapper}>
+          {CouponsData.map((_, index) => (
+            <View
+              key={index}
+              style={[
+                styles.Cupondot,
+                cuponActiveIndex === index && styles.activeDot,
+              ]}
+            />
+          ))}
+        </View>
       </ImageBackground>
+
+      <View style={styles.chartContainer}>
+        <View style={styles.chartContainerHeader}>
+          {/* avg and top with line graph */}
+          <View style={styles.avgValueAndGraph}>
+            <View style={styles.topGraphColumn}>
+              <Text style={styles.topGraphValue}>
+                $62 <Text style={styles.topGraphText}>Top</Text>
+              </Text>
+
+              <View style={styles.graphBg}>
+                <View style={styles.graphAbove} />
+              </View>
+            </View>
+            <View style={styles.topGraphColumn}>
+              <Text style={styles.topGraphValue}>
+                $49 {''}
+                <Text style={styles.topGraphText}>Avg.</Text>
+              </Text>
+              <View style={styles.graphBg}>
+                <View style={styles.graphAboveSecond} />
+              </View>
+            </View>
+          </View>
+          {/* ending of above */}
+
+          {/* right drop down */}
+          <View style={[styles.DropDownContainer, {width: width / 3}]}>
+            <DropDownPicker
+              open={open}
+              value={value}
+              items={items}
+              setOpen={setOpen}
+              setValue={setValue}
+              setItems={setItems}
+              placeholder="Select an option"
+              dropdownPosition="bottom"
+              containerStyle={{
+                width: '70%',
+                borderColor: 'transparent', // Optional: Remove border
+              }}
+              style={{
+                backgroundColor: '#2F455C',
+                borderColor: 'transparent',
+                height: 25,
+                borderRadius: 16,
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingHorizontal: 10,
+              }}
+              textStyle={{
+                color: 'lightgrey', // Color of the text inside the dropdown
+                fontSize: 14, // Adjust font size if needed
+              }}
+              dropDownContainerStyle={{
+                backgroundColor: '#2F455C',
+                borderColor: 'transparent', // Optional: Remove border
+                borderRadius: 16,
+              }}
+            />
+          </View>
+        </View>
+
+        {/* bar graphs */}
+
+        <View style={styles.barGraphConatiner}>
+          <FlatList
+            data={graphData}
+            renderItem={renderItem}
+            keyExtractor={item => item.date}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.flatListContainer}
+            ItemSeparatorComponent={() => <View style={styles.separator} />}
+          />
+        </View>
+      </View>
+
+      {/* main container ending*/}
     </View>
   );
 };

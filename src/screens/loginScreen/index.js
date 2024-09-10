@@ -26,7 +26,7 @@ const LoginScreen = ({navigation}) => {
 
       <View style={styles.body}>
         <Image
-          source={images.appLogo}
+          source={images.apllicationLogo}
           style={styles.logoImage}
         />
         <View style={styles.mainContent}>
