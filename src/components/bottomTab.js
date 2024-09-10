@@ -9,6 +9,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import MenuScreen from '../screens/MenuScreen';
 import {View, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import { images } from '../assets/images';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,8 +20,8 @@ const CustomTabBarButton = ({children, onPress}) => (
       top: -30,
       justifyContent: 'center',
       alignItems: 'center',
-      
-     // ...styles.shadow,
+
+      // ...styles.shadow,
     }}>
     <LinearGradient
       colors={['#34F5C5', '#1DCDFE']} // Adjust colors as needed
@@ -31,7 +32,6 @@ const CustomTabBarButton = ({children, onPress}) => (
         justifyContent: 'center',
         alignItems: 'center',
         elevation: 5,
-        
       }}>
       {children}
     </LinearGradient>
@@ -44,38 +44,22 @@ const Tabs = () => (
       style: {
         width: 'auto',
         position: 'absolute',
-        
-        // bottom: 25,
-        // left: 20,
-        // right: 20,
-        // elevation: 0,
-
         backgroundColor: 'red',
-        // borderRadius: 15,
-       // height: 100,
-       //tabBarActiveBackgroundColor: 'green'
       },
     }}
     screenOptions={{
       tabBarStyle: {
         backgroundColor: '#2F455C',
-        borderTopRightRadius: 20,
-         position: 'absolute',
-        borderTopLeftRadius: 20,
-       // detachInactiveScreens: false
-       borderTopWidth: 0,
-        // borderBottomRightRadius: 5,
-
-        // borderBottomLeftRadius: 5,
-       height: 65,
-        //backgroundColor: 'transparent',
-        
-        
+        borderTopRightRadius: 15,
+        position: 'absolute',
+        borderTopLeftRadius: 15,
+        borderTopWidth: 0,
+        height: 65,
       },
     }}
-    
-   // tabBarActiveBackgroundColor='red'
-    >
+
+    // tabBarActiveBackgroundColor='red'
+  >
     <Tab.Screen
       name="Dashboard"
       component={DashboardScreen}
@@ -84,7 +68,7 @@ const Tabs = () => (
         tabBarIcon: ({focused}) => (
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
             <Image
-              source={require('../assets/images/home.png')}
+              source={images.homeIcon}
               resizeMode="contain"
               style={{
                 width: 20.8,
@@ -115,7 +99,7 @@ const Tabs = () => (
         tabBarIcon: ({focused}) => (
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
             <Image
-              source={require('../assets/images/wallet.png')}
+              source={images.walletIcon}
               resizeMode="contain"
               style={{
                 width: 22.07,
@@ -146,7 +130,7 @@ const Tabs = () => (
         headerShown: false,
         tabBarIcon: ({focused}) => (
           <Image
-            source={require('../assets/images/qrcode.png')}
+            source={images.qrCodeIcon}
             resizeMode="contain"
             style={{
               width: 30,
@@ -171,7 +155,7 @@ const Tabs = () => (
         tabBarIcon: ({focused}) => (
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
             <Image
-              source={require('../assets/images/usergroup.png')}
+              source={images.userGroup}
               resizeMode="contain"
               style={{
                 width: 32,
@@ -199,11 +183,11 @@ const Tabs = () => (
       component={MenuScreen}
       options={{
         headerShown: false,
-       
+
         tabBarIcon: ({focused}) => (
           <View style={{alignItems: 'center', justifyContent: 'center'}}>
             <Image
-              source={require('../assets/images/menu.png')}
+              source={images.menuIcon}
               resizeMode="contain"
               style={{
                 width: 24.12,

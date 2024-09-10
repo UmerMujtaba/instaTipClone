@@ -2,48 +2,48 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/images/Frame.png",
-      "sha1": "bc8389230b104c897fef437f4b3b50774fdafea3"
-    },
-    {
-      "path": "src/assets/images/Line2.png",
-      "sha1": "5c3ae7cf33318b69ed56a07aef7aa8b4d93e01f6"
-    },
-    {
-      "path": "src/assets/images/appLogo.png",
-      "sha1": "d1b5035cc7d6a25988a44316bd4163115f809986"
-    },
-    {
       "path": "src/assets/images/apple.png",
       "sha1": "4751b7548b392f47ae1f52d53cf1f208a35fb64f"
+    },
+    {
+      "path": "src/assets/images/applogo.png",
+      "sha1": "d1b5035cc7d6a25988a44316bd4163115f809986"
     },
     {
       "path": "src/assets/images/arrow.png",
       "sha1": "7bef4e64362ecf10916a4115de61ef2d030d1fff"
     },
     {
-      "path": "src/assets/images/backIcon.png",
+      "path": "src/assets/images/backicon.png",
       "sha1": "e77fac4d635d86f755963ebe84777b6af793904d"
     },
     {
-      "path": "src/assets/images/cardPricing.png",
+      "path": "src/assets/images/cardpricing.png",
       "sha1": "17a31fe85636c0702a5538f2fd90de987221b94c"
     },
     {
-      "path": "src/assets/images/emailIcon.png",
+      "path": "src/assets/images/data.png",
+      "sha1": "2ebc6c4198fd2d3460500eb6823c5ad4a75a2337"
+    },
+    {
+      "path": "src/assets/images/emailicon.png",
       "sha1": "6c4fba5d5342d9b56a7952fd6c615641dea1a7cd"
     },
     {
-      "path": "src/assets/images/eyeIcon.png",
+      "path": "src/assets/images/eyeicon.png",
       "sha1": "0223e093c3cc17d71a0d9bc96ab7522d15f1f4f4"
     },
     {
-      "path": "src/assets/images/eyeIconHide.png",
+      "path": "src/assets/images/eyeiconhide.png",
       "sha1": "58376b5460911281c5f12fc69a4c41fc55aef1d9"
     },
     {
       "path": "src/assets/images/facebook.png",
       "sha1": "f7068beee96b31babda6ad3d0d7fc78ba284711c"
+    },
+    {
+      "path": "src/assets/images/frame.png",
+      "sha1": "bc8389230b104c897fef437f4b3b50774fdafea3"
     },
     {
       "path": "src/assets/images/frame2.png",
@@ -54,8 +54,12 @@
       "sha1": "d2ae8586fe9acb0876cd7eed2e07dde1fba54c5d"
     },
     {
+      "path": "src/assets/images/home.png",
+      "sha1": "c558b3cc6d30a97f12254398d91bb8b96bbfb4b7"
+    },
+    {
       "path": "src/assets/images/index.js",
-      "sha1": "0386ffc4f351a341a6a6893036ac1016a8717318"
+      "sha1": "b5a6188f3ca202a74b2beec29db87cfb074dd9c1"
     },
     {
       "path": "src/assets/images/inviteandearn.png",
@@ -70,8 +74,16 @@
       "sha1": "c3922a57e233de528a6787fe01a6635b35074113"
     },
     {
+      "path": "src/assets/images/line2.png",
+      "sha1": "5c3ae7cf33318b69ed56a07aef7aa8b4d93e01f6"
+    },
+    {
       "path": "src/assets/images/meeting.png",
       "sha1": "60fd095e57c5f120cdc9cb9dd896bacba312df62"
+    },
+    {
+      "path": "src/assets/images/menu.png",
+      "sha1": "21e03b728931fb31c7af41a99f6dc559c17de6a2"
     },
     {
       "path": "src/assets/images/note.png",
@@ -86,6 +98,10 @@
       "sha1": "bb963c5060e17d3b0a3390ec2db92502a8e76f2b"
     },
     {
+      "path": "src/assets/images/qrcode.png",
+      "sha1": "86f36925e088075c0c414ea6443448956642fd0e"
+    },
+    {
       "path": "src/assets/images/smartphone.png",
       "sha1": "5978757cc18049c1bbe48b8b6347e59af6450cfb"
     },
@@ -98,8 +114,16 @@
       "sha1": "d470fd6cc64a215e07aa33ee670f40b898ca8691"
     },
     {
-      "path": "src/assets/images/userImage.png",
+      "path": "src/assets/images/usergroup.png",
+      "sha1": "4ab18d50185783c1b3da297ec93900b8554abec2"
+    },
+    {
+      "path": "src/assets/images/userimage.png",
       "sha1": "03eeb2f8c79d5c93a35b90f049e2b0f08f33206a"
+    },
+    {
+      "path": "src/assets/images/wallet.png",
+      "sha1": "a9b932b464013e242cc3a50c6e064bd8431c139b"
     }
   ]
 }

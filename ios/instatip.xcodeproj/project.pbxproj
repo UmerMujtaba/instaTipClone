@@ -14,20 +14,11 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-instatip-instatipTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-instatip-instatipTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		3F50A52306D74843B4272464 /* Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A708380FB349989FF7F010 /* Frame.png */; };
-		56652B96D91C48B2AEF9AB01 /* Line2.png in Resources */ = {isa = PBXBuildFile; fileRef = 39B66FA3149F476FB26A533E /* Line2.png */; };
-		15EA39BDC0F5473A8E048E25 /* appLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 73D68520E4304FA38F0C1B17 /* appLogo.png */; };
 		95D3CC7F50AF4F79BA9E3A8B /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 59EFBA8D5B9546B4A483C9DD /* apple.png */; };
 		4B2DEF7DFF8540E3883DCF01 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BF93CFE415CB4C71A7FE9DB1 /* arrow.png */; };
-		02169B548BC64D09A30F6BA1 /* backIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 907AA8E15707463CAB1313F5 /* backIcon.png */; };
-		4B8A99E6BE0D455285C9A4BA /* cardPricing.png in Resources */ = {isa = PBXBuildFile; fileRef = 5546EE6DE8F244BE8B138BE9 /* cardPricing.png */; };
-		F81D7AFF5D2E492F8BA82728 /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A97E77DC7774EB08ACA93A3 /* emailIcon.png */; };
-		B4E52982F59447BFA1C8E7D3 /* eyeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2555BE76C284C748C72EB64 /* eyeIcon.png */; };
-		CE645A0733884CD39A5A425C /* eyeIconHide.png in Resources */ = {isa = PBXBuildFile; fileRef = AE28A4BB281E44DEB62775EB /* eyeIconHide.png */; };
 		360D4C08C4D84C0AA02040B3 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = BD00ED78A3AE4A7DAFCE9030 /* facebook.png */; };
 		774D5263E5714F8485D28BDB /* frame2.png in Resources */ = {isa = PBXBuildFile; fileRef = 38FF653D966B4CF2B8C2A283 /* frame2.png */; };
 		231BF64B853748BDAEF8A655 /* gmail.png in Resources */ = {isa = PBXBuildFile; fileRef = 08357E15E77541B593180426 /* gmail.png */; };
-		D502840D5BB5468AB8380850 /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = 3E3744E79A914C379EDEBAE6 /* index.js */; };
 		439ED7A0A8D34DAFAA03F2EA /* inviteandearn.png in Resources */ = {isa = PBXBuildFile; fileRef = 7036EA081FCE437BB5B500C5 /* inviteandearn.png */; };
 		C4935657C64846B7AAD53A39 /* jar.png in Resources */ = {isa = PBXBuildFile; fileRef = C85B7EE5D7194F85B783C028 /* jar.png */; };
 		B057A9C5B967429EB9E03732 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F878526DD164267AFDC8759 /* line.png */; };
@@ -38,7 +29,22 @@
 		B1583A81C7CF4821A0AC7FD9 /* smartphone.png in Resources */ = {isa = PBXBuildFile; fileRef = BBA4169B741C4504BB34CC3F /* smartphone.png */; };
 		15227233DF7C4280B8134D8D /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = FF08447E93D4454BB21E8753 /* user.png */; };
 		C57FE0400ABD47BBAA183C20 /* user3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6373D43DEB744F799185A55A /* user3.png */; };
-		FAEE571974FA4C58B15B1AA9 /* userImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 17904B396B7A4FD3AF99B303 /* userImage.png */; };
+		9F9C086E01A2452EA9272603 /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B31D0CA2BAD6448383FCC081 /* applogo.png */; };
+		4B37A3D033FC44139FD9ED20 /* backicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86FD45D4540E414397B20F2E /* backicon.png */; };
+		1E23939DAA4F46CF904B6AAB /* cardpricing.png in Resources */ = {isa = PBXBuildFile; fileRef = 409FB9C369F94F0EAAAE6D49 /* cardpricing.png */; };
+		CC2D8AC3FDC544BAB068E37C /* data.png in Resources */ = {isa = PBXBuildFile; fileRef = E6A9DB2027644E69844DA6FB /* data.png */; };
+		9B374CDBAEB34B669A5DDA2D /* emailicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12287273B2124D4DA9ACE770 /* emailicon.png */; };
+		6293F715E293429A8FF1B560 /* eyeicon.png in Resources */ = {isa = PBXBuildFile; fileRef = F46ECD1C39A34CECB7D43308 /* eyeicon.png */; };
+		CBB3367865CA4F1C9D9448C1 /* eyeiconhide.png in Resources */ = {isa = PBXBuildFile; fileRef = BB255447AC764122A6D02047 /* eyeiconhide.png */; };
+		FD10EC352B12497CA9C011FF /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 40455B0CF995425A84D1B676 /* frame.png */; };
+		412BEA302D904C3C9A967946 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = AF3BE1B3CC03433485412D63 /* home.png */; };
+		B25EEC3EFFB6490D990EB89F /* index.js in Resources */ = {isa = PBXBuildFile; fileRef = E1EB996ACBB34291BF9DFE5F /* index.js */; };
+		5C8B41CC963642E897D665F1 /* line2.png in Resources */ = {isa = PBXBuildFile; fileRef = C52CB35217A644FD9BE45F9C /* line2.png */; };
+		73FCAFDE987845A089D63072 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D6DD4E42A84D589E13FAFD /* menu.png */; };
+		CD1463EE2E2548F29C34602A /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E20DAA63E14F1698C5AD2E /* qrcode.png */; };
+		36CBC512ACAF4646B9DC6D61 /* usergroup.png in Resources */ = {isa = PBXBuildFile; fileRef = DE5BCBC1997745078EF1DC57 /* usergroup.png */; };
+		D6FA46349C5F4531A4B533F0 /* userimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 761C052FE0F64B62A56634BF /* userimage.png */; };
+		F5A4FD1B09A14961AA12F88E /* wallet.png in Resources */ = {isa = PBXBuildFile; fileRef = A65B3CFB8815494A8189B991 /* wallet.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,20 +76,11 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = instatip/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-instatip-instatipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instatip-instatipTests.release.xcconfig"; path = "Target Support Files/Pods-instatip-instatipTests/Pods-instatip-instatipTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		53A708380FB349989FF7F010 /* Frame.png */ = {isa = PBXFileReference; name = "Frame.png"; path = "../src/assets/images/Frame.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		39B66FA3149F476FB26A533E /* Line2.png */ = {isa = PBXFileReference; name = "Line2.png"; path = "../src/assets/images/Line2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		73D68520E4304FA38F0C1B17 /* appLogo.png */ = {isa = PBXFileReference; name = "appLogo.png"; path = "../src/assets/images/appLogo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		59EFBA8D5B9546B4A483C9DD /* apple.png */ = {isa = PBXFileReference; name = "apple.png"; path = "../src/assets/images/apple.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BF93CFE415CB4C71A7FE9DB1 /* arrow.png */ = {isa = PBXFileReference; name = "arrow.png"; path = "../src/assets/images/arrow.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		907AA8E15707463CAB1313F5 /* backIcon.png */ = {isa = PBXFileReference; name = "backIcon.png"; path = "../src/assets/images/backIcon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5546EE6DE8F244BE8B138BE9 /* cardPricing.png */ = {isa = PBXFileReference; name = "cardPricing.png"; path = "../src/assets/images/cardPricing.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0A97E77DC7774EB08ACA93A3 /* emailIcon.png */ = {isa = PBXFileReference; name = "emailIcon.png"; path = "../src/assets/images/emailIcon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F2555BE76C284C748C72EB64 /* eyeIcon.png */ = {isa = PBXFileReference; name = "eyeIcon.png"; path = "../src/assets/images/eyeIcon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AE28A4BB281E44DEB62775EB /* eyeIconHide.png */ = {isa = PBXFileReference; name = "eyeIconHide.png"; path = "../src/assets/images/eyeIconHide.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BD00ED78A3AE4A7DAFCE9030 /* facebook.png */ = {isa = PBXFileReference; name = "facebook.png"; path = "../src/assets/images/facebook.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		38FF653D966B4CF2B8C2A283 /* frame2.png */ = {isa = PBXFileReference; name = "frame2.png"; path = "../src/assets/images/frame2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		08357E15E77541B593180426 /* gmail.png */ = {isa = PBXFileReference; name = "gmail.png"; path = "../src/assets/images/gmail.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3E3744E79A914C379EDEBAE6 /* index.js */ = {isa = PBXFileReference; name = "index.js"; path = "../src/assets/images/index.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7036EA081FCE437BB5B500C5 /* inviteandearn.png */ = {isa = PBXFileReference; name = "inviteandearn.png"; path = "../src/assets/images/inviteandearn.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C85B7EE5D7194F85B783C028 /* jar.png */ = {isa = PBXFileReference; name = "jar.png"; path = "../src/assets/images/jar.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		1F878526DD164267AFDC8759 /* line.png */ = {isa = PBXFileReference; name = "line.png"; path = "../src/assets/images/line.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
@@ -94,7 +91,22 @@
 		BBA4169B741C4504BB34CC3F /* smartphone.png */ = {isa = PBXFileReference; name = "smartphone.png"; path = "../src/assets/images/smartphone.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		FF08447E93D4454BB21E8753 /* user.png */ = {isa = PBXFileReference; name = "user.png"; path = "../src/assets/images/user.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		6373D43DEB744F799185A55A /* user3.png */ = {isa = PBXFileReference; name = "user3.png"; path = "../src/assets/images/user3.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		17904B396B7A4FD3AF99B303 /* userImage.png */ = {isa = PBXFileReference; name = "userImage.png"; path = "../src/assets/images/userImage.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B31D0CA2BAD6448383FCC081 /* applogo.png */ = {isa = PBXFileReference; name = "applogo.png"; path = "../src/assets/images/applogo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		86FD45D4540E414397B20F2E /* backicon.png */ = {isa = PBXFileReference; name = "backicon.png"; path = "../src/assets/images/backicon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		409FB9C369F94F0EAAAE6D49 /* cardpricing.png */ = {isa = PBXFileReference; name = "cardpricing.png"; path = "../src/assets/images/cardpricing.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E6A9DB2027644E69844DA6FB /* data.png */ = {isa = PBXFileReference; name = "data.png"; path = "../src/assets/images/data.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		12287273B2124D4DA9ACE770 /* emailicon.png */ = {isa = PBXFileReference; name = "emailicon.png"; path = "../src/assets/images/emailicon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F46ECD1C39A34CECB7D43308 /* eyeicon.png */ = {isa = PBXFileReference; name = "eyeicon.png"; path = "../src/assets/images/eyeicon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BB255447AC764122A6D02047 /* eyeiconhide.png */ = {isa = PBXFileReference; name = "eyeiconhide.png"; path = "../src/assets/images/eyeiconhide.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		40455B0CF995425A84D1B676 /* frame.png */ = {isa = PBXFileReference; name = "frame.png"; path = "../src/assets/images/frame.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AF3BE1B3CC03433485412D63 /* home.png */ = {isa = PBXFileReference; name = "home.png"; path = "../src/assets/images/home.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E1EB996ACBB34291BF9DFE5F /* index.js */ = {isa = PBXFileReference; name = "index.js"; path = "../src/assets/images/index.js"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C52CB35217A644FD9BE45F9C /* line2.png */ = {isa = PBXFileReference; name = "line2.png"; path = "../src/assets/images/line2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		91D6DD4E42A84D589E13FAFD /* menu.png */ = {isa = PBXFileReference; name = "menu.png"; path = "../src/assets/images/menu.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E9E20DAA63E14F1698C5AD2E /* qrcode.png */ = {isa = PBXFileReference; name = "qrcode.png"; path = "../src/assets/images/qrcode.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE5BCBC1997745078EF1DC57 /* usergroup.png */ = {isa = PBXFileReference; name = "usergroup.png"; path = "../src/assets/images/usergroup.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		761C052FE0F64B62A56634BF /* userimage.png */ = {isa = PBXFileReference; name = "userimage.png"; path = "../src/assets/images/userimage.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A65B3CFB8815494A8189B991 /* wallet.png */ = {isa = PBXFileReference; name = "wallet.png"; path = "../src/assets/images/wallet.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,20 +216,11 @@
 		12FC6F120DEA40DFB14B045D /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				53A708380FB349989FF7F010 /* Frame.png */,
-				39B66FA3149F476FB26A533E /* Line2.png */,
-				73D68520E4304FA38F0C1B17 /* appLogo.png */,
 				59EFBA8D5B9546B4A483C9DD /* apple.png */,
 				BF93CFE415CB4C71A7FE9DB1 /* arrow.png */,
-				907AA8E15707463CAB1313F5 /* backIcon.png */,
-				5546EE6DE8F244BE8B138BE9 /* cardPricing.png */,
-				0A97E77DC7774EB08ACA93A3 /* emailIcon.png */,
-				F2555BE76C284C748C72EB64 /* eyeIcon.png */,
-				AE28A4BB281E44DEB62775EB /* eyeIconHide.png */,
 				BD00ED78A3AE4A7DAFCE9030 /* facebook.png */,
 				38FF653D966B4CF2B8C2A283 /* frame2.png */,
 				08357E15E77541B593180426 /* gmail.png */,
-				3E3744E79A914C379EDEBAE6 /* index.js */,
 				7036EA081FCE437BB5B500C5 /* inviteandearn.png */,
 				C85B7EE5D7194F85B783C028 /* jar.png */,
 				1F878526DD164267AFDC8759 /* line.png */,
@@ -228,7 +231,22 @@
 				BBA4169B741C4504BB34CC3F /* smartphone.png */,
 				FF08447E93D4454BB21E8753 /* user.png */,
 				6373D43DEB744F799185A55A /* user3.png */,
-				17904B396B7A4FD3AF99B303 /* userImage.png */,
+				B31D0CA2BAD6448383FCC081 /* applogo.png */,
+				86FD45D4540E414397B20F2E /* backicon.png */,
+				409FB9C369F94F0EAAAE6D49 /* cardpricing.png */,
+				E6A9DB2027644E69844DA6FB /* data.png */,
+				12287273B2124D4DA9ACE770 /* emailicon.png */,
+				F46ECD1C39A34CECB7D43308 /* eyeicon.png */,
+				BB255447AC764122A6D02047 /* eyeiconhide.png */,
+				40455B0CF995425A84D1B676 /* frame.png */,
+				AF3BE1B3CC03433485412D63 /* home.png */,
+				E1EB996ACBB34291BF9DFE5F /* index.js */,
+				C52CB35217A644FD9BE45F9C /* line2.png */,
+				91D6DD4E42A84D589E13FAFD /* menu.png */,
+				E9E20DAA63E14F1698C5AD2E /* qrcode.png */,
+				DE5BCBC1997745078EF1DC57 /* usergroup.png */,
+				761C052FE0F64B62A56634BF /* userimage.png */,
+				A65B3CFB8815494A8189B991 /* wallet.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -329,20 +347,11 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				3F50A52306D74843B4272464 /* Frame.png in Resources */,
-				56652B96D91C48B2AEF9AB01 /* Line2.png in Resources */,
-				15EA39BDC0F5473A8E048E25 /* appLogo.png in Resources */,
 				95D3CC7F50AF4F79BA9E3A8B /* apple.png in Resources */,
 				4B2DEF7DFF8540E3883DCF01 /* arrow.png in Resources */,
-				02169B548BC64D09A30F6BA1 /* backIcon.png in Resources */,
-				4B8A99E6BE0D455285C9A4BA /* cardPricing.png in Resources */,
-				F81D7AFF5D2E492F8BA82728 /* emailIcon.png in Resources */,
-				B4E52982F59447BFA1C8E7D3 /* eyeIcon.png in Resources */,
-				CE645A0733884CD39A5A425C /* eyeIconHide.png in Resources */,
 				360D4C08C4D84C0AA02040B3 /* facebook.png in Resources */,
 				774D5263E5714F8485D28BDB /* frame2.png in Resources */,
 				231BF64B853748BDAEF8A655 /* gmail.png in Resources */,
-				D502840D5BB5468AB8380850 /* index.js in Resources */,
 				439ED7A0A8D34DAFAA03F2EA /* inviteandearn.png in Resources */,
 				C4935657C64846B7AAD53A39 /* jar.png in Resources */,
 				B057A9C5B967429EB9E03732 /* line.png in Resources */,
@@ -353,7 +362,22 @@
 				B1583A81C7CF4821A0AC7FD9 /* smartphone.png in Resources */,
 				15227233DF7C4280B8134D8D /* user.png in Resources */,
 				C57FE0400ABD47BBAA183C20 /* user3.png in Resources */,
-				FAEE571974FA4C58B15B1AA9 /* userImage.png in Resources */,
+				9F9C086E01A2452EA9272603 /* applogo.png in Resources */,
+				4B37A3D033FC44139FD9ED20 /* backicon.png in Resources */,
+				1E23939DAA4F46CF904B6AAB /* cardpricing.png in Resources */,
+				CC2D8AC3FDC544BAB068E37C /* data.png in Resources */,
+				9B374CDBAEB34B669A5DDA2D /* emailicon.png in Resources */,
+				6293F715E293429A8FF1B560 /* eyeicon.png in Resources */,
+				CBB3367865CA4F1C9D9448C1 /* eyeiconhide.png in Resources */,
+				FD10EC352B12497CA9C011FF /* frame.png in Resources */,
+				412BEA302D904C3C9A967946 /* home.png in Resources */,
+				B25EEC3EFFB6490D990EB89F /* index.js in Resources */,
+				5C8B41CC963642E897D665F1 /* line2.png in Resources */,
+				73FCAFDE987845A089D63072 /* menu.png in Resources */,
+				CD1463EE2E2548F29C34602A /* qrcode.png in Resources */,
+				36CBC512ACAF4646B9DC6D61 /* usergroup.png in Resources */,
+				D6FA46349C5F4531A4B533F0 /* userimage.png in Resources */,
+				F5A4FD1B09A14961AA12F88E /* wallet.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

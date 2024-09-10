@@ -23,6 +23,12 @@ export const images = {
   userOutlinedIcon: require('./user.png'),
   userHighlighted: require('./user3.png'),
   userImages: require('./userimage.png'),
+  homeIcon: require('./home.png'),
+  walletIcon: require('./wallet.png'),
+  qrCodeIcon:require('./qrcode.png'),
+  userGroup: require('./usergroup.png'),
+  menuIcon: require('./menu.png'),
+  crossIcon: require('./cross.png'),
   //logout: require('./logout.png'),
   //menuIcon: require('./menuIcon.png'),
 
