@@ -86,19 +86,19 @@ const LoginScreen = ({navigation}) => {
           <View style={styles.socialMediaIcons}>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={images.appleLog}
+                source={images.appleLogo}
                 style={styles.logoStyle}
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={images.facebookLog}
+                source={images.facebookLogo}
                 style={[styles.logoStyle, styles.logoStyle2]}
               />
             </TouchableOpacity>
             <TouchableOpacity style={styles.icons}>
               <Image
-                source={images.googleLog}
+                source={images.googleLogo}
                 style={[styles.logoStyle, styles.logoStyle3]}
               />
             </TouchableOpacity>

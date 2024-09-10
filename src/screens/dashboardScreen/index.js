@@ -18,6 +18,9 @@ import {images} from '../../assets/images';
 import DropDownPicker from 'react-native-dropdown-picker';
 import {BarChart} from 'react-native-chart-kit';
 
+
+
+
 const {width} = Dimensions.get('window');
 
 const data = [
@@ -352,6 +355,7 @@ const DashboardScreen = ({navigation, route}) => {
             ItemSeparatorComponent={() => <View style={styles.separator} />}
           />
         </View>
+        
       </View>
 
       {/* main container ending*/}

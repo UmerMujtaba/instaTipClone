@@ -6,7 +6,7 @@ const {height} = Dimensions.get('window');
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: '#213142',
+    backgroundColor: '#213142', 
     flex: 1,
   },
   appbarStyle: {
@@ -273,7 +273,14 @@ export default StyleSheet.create({
     height: 160,
     flexDirection: 'row',
   },
+  Textcontainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  
 
+  
   //graph flat list
   chartContainer: {
     marginTop: 10,

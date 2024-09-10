@@ -18,7 +18,7 @@ export default StyleSheet.create({
   },
 
   carouselWrapper: {
-    height: height * 0.6, // Takes half the screen height for the carousel
+    height: height * 0.65, // Takes half the screen height for the carousel
     justifyContent: 'center', // Vertically centers the carousel
     alignItems: 'center', // Horizontally centers the carousel
     overflow: 'hidden',
