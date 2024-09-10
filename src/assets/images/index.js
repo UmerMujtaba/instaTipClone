@@ -29,19 +29,5 @@ export const images = {
   userGroup: require('./usergroup.png'),
   menuIcon: require('./menu.png'),
   crossIcon: require('./cross.png'),
-  //logout: require('./logout.png'),
-  //menuIcon: require('./menuIcon.png'),
-
-  //forgotPassword:require('./forgotPassword.png'),
-  //googleIcon:require('./googleIcon.png'),
-  //homeIcon:require('./homeIcon.png'),
-
-  //frame:require('./Frame.png'),
-  //arrow:require('./arrow.png'),
-  //userImage:require('./userImage.png'),
-
-  //eyeIcon:require('./eyeIcon.png'),
-  //eyeIconHide:require('./eyeIconHide.png'),
-  //cardPricing:require('./cardPricing.png'),
-  //inviteAndEarn:require('./inviteandearn.png'),
+ 
 };

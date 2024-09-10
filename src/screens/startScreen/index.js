@@ -9,7 +9,7 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
-import styles from '../startScreen/styles';
+import styles from './styles';
 import LinearGradient from 'react-native-linear-gradient';
 import data from '../../utils/startScreenData';
 import Strings from '../../constants/strings';

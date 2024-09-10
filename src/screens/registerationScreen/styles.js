@@ -9,28 +9,25 @@ export default StyleSheet.create({
     backgroundColor: '#213142',
     flex: 1,
   },
-  mainBody:{
-    justifyContent:'center',
-    alignItems:'center',
-    marginTop: '20%'
+  mainBody: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: '20%',
   },
-  startedText:{
-    
-    fontFamily: fonts.SF_PRO_TEXT.Outfit.medium,
+  startedText: {
+    fontFamily: fonts.SF_PRO_TEXT.inter.SemiBold,
     fontSize: 30,
     color: '#FFFFFF',
-    
   },
-  freeAccText:{
-
+  freeAccText: {
     fontFamily: fonts.SF_PRO_TEXT.inter.Regular,
     fontSize: 18,
     color: '#FFFFFF',
-   marginBottom: 40
+    marginBottom: 40,
   },
-  content:{
+  content: {
     width: 331,
-    height:608
+    height: 608,
   },
   checkbox: {
     width: 13.07,
@@ -59,10 +56,12 @@ export default StyleSheet.create({
     color: '#64748B',
     fontSize: 10,
     marginLeft: 5, // Add space between checkbox and text
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
   },
-  terms:{
+  terms: {
     color: '#29E2E0',
     fontSize: 10,
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
   },
   registerButton: {
     marginTop: 20,
@@ -73,9 +72,10 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: '#213142',
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     fontSize: 18,
     textAlign: 'center',
+    fontFamily: fonts.SF_PRO_TEXT.inter.SemiBold,
   },
   linearGradient: {
     borderRadius: 8,
@@ -87,18 +87,21 @@ export default StyleSheet.create({
   },
   loginText: {
     flexDirection: 'row',
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
     marginTop: 10,
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
   },
   accountLabel: {
     color: '#64748B',
     fontSize: 16,
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
   },
   login: {
     color: '#29E2E0',
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 16, 
+    
     marginLeft: 5,
+    fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
   },
 });

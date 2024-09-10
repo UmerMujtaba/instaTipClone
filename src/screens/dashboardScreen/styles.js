@@ -1,6 +1,9 @@
 import {StyleSheet, Dimensions} from 'react-native';
-import fonts from '../../constants/fonts';
+// import fonts from '../../constants/fonts';
+
 import {rfs, rwp, wp} from '../../constants/dimensions';
+import fonts from '../../constants/fonts';
+
 
 export default StyleSheet.create({
   container: {
@@ -25,7 +28,8 @@ export default StyleSheet.create({
     flexDirection: 'row',
   },
   nameText: {
-    fontFamily: fonts.SF_PRO_TEXT.Outfit?.Regular,
+
+   fontFamily: fonts.SF_PRO_TEXT.inter.Regular,
     fontSize: rfs(24),
     color: '#FFFFFF',
     marginLeft: 10,
@@ -154,7 +158,7 @@ export default StyleSheet.create({
     color: '#FFFFFF',
     fontSize: rfs(16),
     marginTop: 5,
-    fontFamily: fonts.SF_PRO_TEXT.Outfit.Regular,
+    fontFamily: fonts.SF_PRO_TEXT.inter.Regular,
     opacity: 0.5,
   },
   peopleOvalContainer: {
@@ -164,6 +168,7 @@ export default StyleSheet.create({
     borderRadius: 40,
     backgroundColor: '#2F455C',
     alignItems: 'center',
+    
   },
   flatListStyle: {
     marginLeft: 10,
@@ -195,7 +200,7 @@ export default StyleSheet.create({
     marginRight: 1,
   },
   discountText: image => ({
-    fontFamily: fonts.SF_PRO_TEXT.Outfit.medium,
+    fontFamily: fonts.SF_PRO_TEXT.inter.Regular,
     fontSize: rfs(21),
     textAlign: 'center',
     color: '#FFFFFF',
@@ -214,7 +219,7 @@ export default StyleSheet.create({
     fontSize: 18,
     textAlign: 'center',
     zIndex: 1,
-    fontFamily: fonts.SF_PRO_TEXT.inter.ExtraBold,
+    fontFamily: fonts.SF_PRO_TEXT.inter.Regular,
   },
   closeIconWrapper: {
     position: 'absolute',
@@ -223,14 +228,22 @@ export default StyleSheet.create({
     zIndex: 10, // Ensure it's on top
   },
   closeIcon: {
-    width: rwp(14),
-    height: rwp(14),
-   // transform: rotate: '-45deg'  
+    width: rwp(20),
+    height: rwp(20),
+    // transform: [{ translateX: -10}] 
   },
+
+
   graphImageBg: {
     width: wp(100), // Set width to 90% of the screen width
     height: rwp(225),
   },
+
+
+
+
+
+
 
   // chartContainerHeader: {
   //   flexDirection: 'row',

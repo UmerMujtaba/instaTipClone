@@ -5,20 +5,13 @@ import {
   Image,
   Dimensions,
   ImageBackground,
-  ScrollView,
-  StyleSheet,
   TouchableOpacity,
   FlatList,
 } from 'react-native';
 import {BlurView} from '@react-native-community/blur';
 import styles from './styles';
-import {useFocusEffect} from '@react-navigation/native'; // For handling screen focus
-import fonts from '../../constants/fonts';
+import {useFocusEffect} from '@react-navigation/native';   
 import {images} from '../../assets/images';
-import DropDownPicker from 'react-native-dropdown-picker';
-import {BarChart} from 'react-native-chart-kit';
-
-const {width} = Dimensions.get('window');
 
 const data = [
   {key: '1', earned: '$60.00', mainHeading: 'Earned Today'},
@@ -171,12 +164,14 @@ const DashboardScreen = ({navigation, route}) => {
           </View>
           <Text style={styles.nameText}>Hi, John</Text>
         </View>
+        <TouchableOpacity>
         <View style={styles.notificationImageContainer}>
           <Image
             source={images.notification}
             style={styles.notificationImage}
           />
         </View>
+        </TouchableOpacity>
       </View>
 
       {/* ImageBackground with Texts and Eye Icon */}

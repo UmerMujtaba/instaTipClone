@@ -50,18 +50,27 @@ const Tabs = () => (
     screenOptions={{
       tabBarStyle: {
         backgroundColor: '#2F455C',
-        borderTopRightRadius: 15,
+        borderTopRightRadius: 22,
         position: 'absolute',
-        borderTopLeftRadius: 15,
+        borderTopLeftRadius: 22,
         borderTopWidth: 0,
         height: 65,
+        
+          tabBarShowLabel: false,
+          tabBarStyle: [
+            {
+              "display": "flex"
+            },
+            null
+          ]
+        
       },
     }}
 
     // tabBarActiveBackgroundColor='red'
   >
     <Tab.Screen
-      name="Dashboard"
+      name="DashboardTab"
       component={DashboardScreen}
       options={{
         headerShown: false,

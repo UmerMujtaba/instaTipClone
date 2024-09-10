@@ -35,6 +35,7 @@ export default StyleSheet.create({
     marginBottom: 50,
   },
   mainContent: {
+    
     justifyContent: 'center',
     alignItems: 'center',
     width: 330,
@@ -46,6 +47,7 @@ export default StyleSheet.create({
     width: 320,
     marginBottom: 20,
     alignItems: 'center', // Align checkbox and text vertically
+   
   },
   checkbox: {
     width: 12,
@@ -73,10 +75,12 @@ export default StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 12,
     marginLeft: 5, // Add space between checkbox and text
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
   },
   forgotText: {
     color: '#29E2E0',
     fontSize: 12,
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
   },
 
   registerButton: {
@@ -88,9 +92,10 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: '#213142',
-    fontWeight: 'bold',
-    fontSize: 18,
+   // fontWeight: 'bold',
+    fontSize: 20,
     textAlign: 'center',
+    fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
   },
   linearGradient: {
     borderRadius: 5,
@@ -155,10 +160,13 @@ export default StyleSheet.create({
     color: '#64748B',
     fontSize: 15,
     textAlign: 'center',
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
   },
   footerText2: {
     color: '#29E2E0',
     fontSize: 15,
     textAlign: 'center',
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
+    //fontFamily: fonts.SF_PRO_TEXT.
   },
 });

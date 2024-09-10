@@ -31,7 +31,9 @@ export default StyleSheet.create({
 
   carouselTitle: {
     marginTop: 20,
-    fontFamily: fonts.SF_PRO_TEXT.Outfit.SemiBold,
+    fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
+
+    // fontFamily: fonts.SF_PRO_TEXT.Outfit.SemiBold,
     fontSize: 24,
     //fontWeight: 'bold',
     color: '#FFFFFF',
@@ -48,9 +50,10 @@ export default StyleSheet.create({
   },
   buttonText: {
     color: '#213142',
-    fontWeight: 'bold',
-    fontSize: 18,
+    //fontWeight: 'bold',
+   fontSize: 18,
     textAlign: 'center',
+    fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
   },
   linearGradient: {
     borderRadius: 5,
@@ -79,12 +82,14 @@ export default StyleSheet.create({
   accountLabel: {
     color: '#64748B',
     fontSize: 16,
+    fontFamily:fonts.SF_PRO_TEXT.inter.Regular,
   },
   login: {
     color: '#29E2E0',
     fontSize: 16,
-    fontWeight: 'bold',
+    //fontWeight: 'bold',
     marginLeft: 5,
+    fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
   },
   activeDot: {
     width: 6.11,

@@ -57,7 +57,8 @@ export default {
           Light: 'Outfit-Light',
           Regular: 'Outfit-Regular',
           SemiBold: 'Outfit-SemiBold',
-          medium: 'Outfit-Medium'
+          medium: 'Outfit-Medium',
+          ExtraBold: 'Outfit-ExtraBold',
         },
         inter: {
           Black: 'Inter-Black',

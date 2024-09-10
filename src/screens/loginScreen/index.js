@@ -66,7 +66,7 @@ const LoginScreen = ({navigation}) => {
 
           <TouchableOpacity
             style={styles.registerButton}
-            onPress={() => navigation.navigate('Register')}>
+            onPress={() => navigation.navigate('Dashboard')}>
             <LinearGradient
               start={{x: 0.0, y: 0.5}}
               end={{x: 1.0, y: 0.5}}
