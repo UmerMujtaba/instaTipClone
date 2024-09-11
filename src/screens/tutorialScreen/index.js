@@ -27,7 +27,7 @@ const renderItem3 = ({item}) => {
   );
 };
 
-const FirstScreen = ({navigation}) => {
+const TutorialScreen = ({navigation}) => {
   const [page, setPage] = useState(0);
   const isCarousel = useRef(null);
   // const [statusBarStyle, setStatusBarStyle] = useState(STYLES[0]);
@@ -87,4 +87,4 @@ const FirstScreen = ({navigation}) => {
   );
 };
 
-export default FirstScreen;
+export default TutorialScreen;
