@@ -203,7 +203,7 @@ export default StyleSheet.create({
   },
   discountText: image => ({
     fontFamily: fonts.SF_PRO_TEXT.inter.Regular,
-    fontSize: rfs(21),
+    fontSize: rfs(19),
     textAlign: 'center',
     color: '#FFFFFF',
   }),

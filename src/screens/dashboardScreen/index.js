@@ -14,70 +14,11 @@ import styles from './styles';
 import {useFocusEffect} from '@react-navigation/native';   
 import {images} from '../../assets/images';
 import Strings from '../../constants/strings';
+import { useTranslationData } from '../../hooks/userTranslationData'; // Import the custom hook
+import { useTranslation } from 'react-i18next';
+import i18next, { languageResources } from '../../../src/localization/i18n'
+import { useCouponsData, usePeopleData } from '../../hooks/cuponTranslatedData';
 
-
-const data = [
-  {key: '1', earned: '$60.00', mainHeading: 'Earned Today'},
-  {key: '2', earned: '$75.00', mainHeading: 'Remaining Balance'},
-  {key: '3', earned: '$80.00', mainHeading: 'Tips Given'},
-  {key: '4', earned: '$50.00', mainHeading: 'Earned Today'},
-];
-
-const peopleData = [
-  {
-    id: '1',
-    name: 'Name',
-    image: images.userHighlighted,
-    value: '€0',
-  },
-  {
-    id: '2',
-    name: 'Name',
-    image: images.userHighlighted,
-    value: '€5',
-  },
-  {
-    id: '3',
-    name: 'Name',
-    image: images.userHighlighted,
-    value: '€10',
-  },
-  {
-    id: '4',
-    name: 'Name',
-    image: images.userHighlighted,
-    value: '€0',
-  },
-  {
-    id: '5',
-    name: 'Name',
-    image: images.userHighlighted,
-    value: '€5',
-  },
-  {
-    id: '6',
-    name: 'Name',
-    image: images.userHighlighted,
-    value: '€10',
-  },
-  // Add more data as needed
-];
-
-const CouponsData = [
-  {
-    id: '1',
-    name: 'Invite your peers & earn \n up to 2% of their tips  for life',
-    image: images.arrowImage,
-  },
-  {
-    id: '2',
-    name: 'Follow your friends, watch their \n progress, and compete for TOP 5',
-  },
-  {
-    id: '3',
-    name: 'Order free InstaTip tools and \n increase your tips by upto 70%',
-  },
-];
 
 const graphData = [
   {id: '1', date: 'FEB 1', height: 120},
@@ -93,6 +34,11 @@ const DashboardScreen = ({navigation, route}) => {
   const [isBlurred, setIsBlurred] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const flatListRef = useRef(null);
+  const data = useTranslationData();
+  const couponsData = useCouponsData();
+  const { t, i18n } = useTranslation();
+  const peopleData = usePeopleData();
+
 
   // Callback for viewable items
   const onViewableItemsChanged = useCallback(({ viewableItems }) => {
@@ -166,7 +112,7 @@ const DashboardScreen = ({navigation, route}) => {
           <View style={styles.imageAvatar}>
             <Image source={images.userImages} style={styles.imageAvatar} />
           </View>
-          <Text style={styles.nameText}>{Strings.greetings}</Text>
+          <Text style={styles.nameText}>{t('greetings')}</Text>
         </View>
         <TouchableOpacity>
         <View style={styles.notificationImageContainer}>
@@ -282,7 +228,7 @@ const DashboardScreen = ({navigation, route}) => {
           </TouchableOpacity>
 
           <FlatList
-            data={CouponsData}
+            data={couponsData}
             keyExtractor={item => item.id}
             horizontal
             pagingEnabled
@@ -299,7 +245,7 @@ const DashboardScreen = ({navigation, route}) => {
           />
 
           <View style={styles.paginationCuponWrapper}>
-            {CouponsData.map((_, index) => (
+            {couponsData.map((_, index) => (
               <View
                 key={index}
                 style={[

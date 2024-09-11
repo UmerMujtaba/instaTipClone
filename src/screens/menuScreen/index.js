@@ -2,11 +2,15 @@ import { View, Text, ImageBackground, Image, TouchableOpacity, ScrollView } from
 import React from 'react'
 import styles from './styles'
 import { images } from '../../assets/images'
-import Strings from '../../constants/strings'
-import { rwp, rhp } from '../../constants/dimensions'
 import MenuTile from '../../components/menuTile'
 
-const MenuScreen = () => {
+import { useTranslation } from 'react-i18next';
+
+import i18next, { languageResources } from '../../../src/localization/i18n'
+
+
+const MenuScreen = ({navigation}) => {
+  const { t, i18n } = useTranslation();
   return (
     <View style={styles.container}>
       <ImageBackground source={images.menuTopBgImage} resizeMode='cover' style={styles.topBgImage} >
@@ -31,7 +35,7 @@ const MenuScreen = () => {
         <Image source={images.menuIconFilled} style={styles.menuFilledImage} />
 
       </View>
-      <View style={styles.menuTextBgContainer}><Text style={styles.menuText}>{Strings.menu} </Text></View>
+      <View style={styles.menuTextBgContainer}><Text style={styles.menuText}>{t('menu')} </Text></View>
      
 
       <View style={styles.MenuContent}>
@@ -40,70 +44,70 @@ const MenuScreen = () => {
       >
         <MenuTile
           iconSource={images.personalDetailIcon}
-          label={Strings.personalDetails}
+          label={t('personalDetails')}
           onPress={() => {
             // Define onPress action here
           }}
         />
           <MenuTile
           iconSource={images.addressIcon}
-          label={Strings.address}
+          label={t('address')}
           onPress={() => {
             // Define onPress action here
           }}
         />
           <MenuTile
           iconSource={images.bankIcon}
-          label={Strings.bankAccount}
+          label={t('bankAccount')}
           onPress={() => {
             // Define onPress action here
           }}
         />
           <MenuTile
           iconSource={images.securityIcon}
-          label={Strings.passwordAndSecurity}
+          label={t('passwordAndSecurity')}
           onPress={() => {
             // Define onPress action here
           }}
         />
          <MenuTile
           iconSource={images.languageIcon}
-          label={Strings.languageAndCurrency}
-          onPress={() => {
-            // Define onPress action here
-          }}
+          label={t('languageAndCurrency')}
+          onPress={() => 
+             navigation.navigate('Language')
+          }
         />
          <MenuTile
           iconSource={images.usergGuideIcon}
-          label={Strings.userGuide}
+          label={t('userGuide')}
           onPress={() => {
             // Define onPress action here
           }}
         />
         <MenuTile
           iconSource={images.supportIcon}
-          label={Strings.support}
+          label={t('support')}
           onPress={() => {
             // Define onPress action here
           }}
         />
         <MenuTile
           iconSource={images.termsIcon}
-          label={Strings.termsAndConditions}
+          label={t('termsAndConditions')}
           onPress={() => {
             // Define onPress action here
           }}
         />
         <MenuTile
           iconSource={images.policyIcon}
-          label={Strings.privacyPolicy}
+          label={t('privacyPolicy')}
           onPress={() => {
             // Define onPress action here
           }}
         />
         <MenuTile
           iconSource={images.logoutIcon}
-          label={Strings.logout}
+          label={t('logout')}
           onPress={() => {
             // Define onPress action here
           }}

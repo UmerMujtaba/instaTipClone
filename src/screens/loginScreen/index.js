@@ -1,35 +1,27 @@
 import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity, Alert} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Alert,StatusBar} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Strings from '../../constants/strings';
 import styles from './styles';
 import CustomTextInput from '../../components/textFields';
 import {images} from '../../assets/images';
-import * as Yup from 'yup';
 import { Formik } from 'formik';
 import GradientButton from '../../components/button';
+import { useTranslation } from 'react-i18next';
+import i18next, { languageResources } from '../../../src/localization/i18n'
+import useValidationSchema from '../../hooks/cuponTranslatedData';
 
 
-const validationSchema = Yup.object().shape({
-  email: Yup.string()
-  .email('Please enter a valid email address')
-  .required('Please enter an email address'),
-  password: Yup.string()
-  .required('Please enter a password')
-  .matches(
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/,
-      'Password must contain at least one letter, one number, one symbol, and be at least 8 characters long.'
-    ),
-});
+
 
 
 const LoginScreen = ({navigation}) => {
   // const [email, setEmail] = useState('');
   // const [password, setPassword] = useState('');
   const [isChecked, setIsChecked] = useState(false);
-
   const [isSecureCheck, setIsSecureCheck] = useState(false);
-
+  const validationSchema = useValidationSchema();
+  const { t, i18n } = useTranslation();
 
   const handleFormSubmit = (values) => {
     Alert.alert("Success", 'Logged in successfully', [{ text: "OK", onPress: () => console.log("OK Pressed") }]);
@@ -84,6 +76,7 @@ const LoginScreen = ({navigation}) => {
   // };
 
   return (
+    
     <Formik
       initialValues={{ email: '', password: '' }}
       validationSchema={validationSchema}
@@ -92,6 +85,7 @@ const LoginScreen = ({navigation}) => {
       {({ handleChange, handleBlur, handleSubmit, values, errors, touched }) => (
         
     <View style={styles.container}>
+       <StatusBar translucent backgroundColor="transparent" />
       <TouchableOpacity
         style={styles.backImageContainer}
         onPress={() => navigation.goBack()}>
@@ -109,7 +103,7 @@ const LoginScreen = ({navigation}) => {
           <CustomTextInput
             value={values.email}
             onChangeText={handleChange('email')}
-            placeholder="Email"
+            placeholder={t('email')}
             onBlur={handleBlur('email')}
             imageSource={images.emailIcon}
             keyboardType="email-address"
@@ -120,7 +114,7 @@ const LoginScreen = ({navigation}) => {
           <CustomTextInput
             value={values.password}
             onChangeText={handleChange('password')}
-            placeholder="Password"
+            placeholder={t('password')}
             onBlur={handleBlur('password')}
             suffixIcon={images.eyeIcon}
             keyboardType="default"
@@ -145,10 +139,10 @@ const LoginScreen = ({navigation}) => {
                 onPress={() => setIsChecked(!isChecked)}>
                 {isChecked && <Text style={styles.tickMark}>✓</Text>}
               </TouchableOpacity>
-              <Text style={styles.rememberText}>{Strings.rememberMe}</Text>
+              <Text style={styles.rememberText}>{t('rememberMe')}</Text>
             </View>
             <TouchableOpacity onPress={''}>
-              <Text style={styles.forgotText}>{Strings.forgotPassword}</Text>
+              <Text style={styles.forgotText}>{t('forgotPassword')}</Text>
             </TouchableOpacity>
           </View>
 
@@ -156,7 +150,7 @@ const LoginScreen = ({navigation}) => {
 
           <GradientButton
                 onPress={handleSubmit}
-                buttonText={Strings.login}
+                buttonText={t('login')}
                 style={styles.registerButton}
               />
 
@@ -165,7 +159,7 @@ const LoginScreen = ({navigation}) => {
 
           <View style={styles.lineRow}>
             <Image source={images.line2} />
-            <Text style={styles.lineBtwnText}>{Strings.orLogInWith}</Text>
+            <Text style={styles.lineBtwnText}>{t('orLogInWith')}</Text>
             <Image source={images.line2} />
           </View>
 
@@ -190,9 +184,9 @@ const LoginScreen = ({navigation}) => {
         {/* <View style={{backgroundColor:"red",flex:1}}/> */}
 
         <View style={styles.footer}>
-          <Text style={styles.footerText1}>{Strings.termsTxt}</Text>
+          <Text style={styles.footerText1}>{t('termsTxt')}</Text>
           <TouchableOpacity>
-            <Text style={styles.footerText2}>{Strings.privacyPolicy}</Text>
+            <Text style={styles.footerText2}>{t('privacyPolicy')}</Text>
           </TouchableOpacity>
         </View>
       </View>

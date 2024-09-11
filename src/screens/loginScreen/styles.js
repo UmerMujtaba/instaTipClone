@@ -12,8 +12,8 @@ export default StyleSheet.create({
  
     errorText: {
       color: 'red',
-      marginTop: 5,
-      marginBottom: 10,
+      // marginTop: 5,
+      // marginBottom: 5,
     
   },
   backImage: {
@@ -102,6 +102,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginTop: 20,
+   
   },
   lineBtwnText: {
     marginHorizontal: 10,
