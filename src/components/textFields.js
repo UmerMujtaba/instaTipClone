@@ -11,9 +11,7 @@ const CustomTextInput = ({
   value,
   onChangeText,
   placeholder,
-
   secureTextEntry,
-
   suffixIconStyle,
   style,
   onPress,
@@ -21,6 +19,7 @@ const CustomTextInput = ({
   rightIcon,
   eyeSource,
   eye,
+  onBlur,
   eyePress,
   keyboardType,
   ...props
@@ -35,6 +34,7 @@ const CustomTextInput = ({
         secureTextEntry={secureTextEntry}
         value={value}
         onChangeText={onChangeText}
+        onBlur={onBlur}
       keyboardType={keyboardType}
         style={{flex: 1}}
       />

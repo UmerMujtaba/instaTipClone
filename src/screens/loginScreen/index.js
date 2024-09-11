@@ -109,8 +109,9 @@ const LoginScreen = ({navigation}) => {
             keyboardType="email-address"
             suffixIconStyle={{width: 24, height: 26.4}}
             rightIcon
-          />
-  {touched.email && errors.email && <Text style={styles.errorText}>{errors.email}</Text>}
+          />{(errors.email && touched.email) &&
+                  <Text style={styles.errorText}>{errors.email}</Text>
+                }
           <CustomTextInput
             value={values.password}
             onChangeText={handleChange('password')}
@@ -130,8 +131,9 @@ const LoginScreen = ({navigation}) => {
             eyePress={() => setIsSecureCheck(!isSecureCheck)}
           />
           
-          {touched.password && errors.password && <Text style={styles.errorText}>{errors.password}</Text>}
-
+          {(errors.password && touched.password) &&
+                  <Text style={styles.errorText}>{errors.password}</Text>
+                }
           <View style={styles.forgotPassword}>
             <View style={styles.remembrCheckbox}>
               <TouchableOpacity
