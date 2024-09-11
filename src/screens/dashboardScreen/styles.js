@@ -141,12 +141,13 @@ export default StyleSheet.create({
     width: rwp(80),
     height: rwp(120),
     alignItems: 'center',
+    justifyContent:'center'
   },
   peopleContainer2: {
     borderRadius: 50,
     backgroundColor: '#2F455C',
-    height: rwp(65),
-    width: rwp(65),
+    height: rwp(62),
+    width: rwp(62),
     alignItems: 'center',
     justifyContent: 'center',
   },

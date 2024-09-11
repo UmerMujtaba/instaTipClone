@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Alert} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Strings from '../../constants/strings';
 import styles from './styles';
@@ -10,6 +10,51 @@ const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+
+  const [isSecureCheck, setIsSecureCheck] = useState(false);
+
+
+  const validateInput = () => {
+    if (!email && !password) {
+      // If both are empty
+      showAlert("Please enter an email address and password.");
+      return false;
+    }
+
+    // Individual email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email && !emailRegex.test(email)) {
+      showAlert("Please enter a valid email address.");
+      return false;
+    }
+
+    // Individual password validation
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+    if (password && !passwordRegex.test(password)) {
+      showAlert(
+        "Password must contain at least one letter, one number, one symbol, and be at least 8 characters long."
+      );
+      return false;
+    }
+
+    return true; // Validation successful
+  };
+
+  const showAlert = (message) => {
+    Alert.alert("Invalid Input", message, [{ text: "OK", onPress: () => console.log("OK Pressed") }]);
+  };
+
+  // Function to validate email and password before navigating
+  const handleRegisterPress = () => {
+    const isValid = validateInput();
+
+    if (isValid) {
+      // Reset the text fields after successful validation
+      setEmail('');
+      setPassword('');
+      navigation.navigate('Dashboard'); // Navigate only if both are valid
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -30,9 +75,10 @@ const LoginScreen = ({navigation}) => {
             value={email}
             onChangeText={setEmail}
             placeholder="Email"
-            suffixIcon={images.emailIcon}
+            imageSource={images.emailIcon}
             keyboardType="email-address"
             suffixIconStyle={{width: 24, height: 26.4}}
+            rightIcon
           />
 
           <CustomTextInput
@@ -41,9 +87,18 @@ const LoginScreen = ({navigation}) => {
             placeholder="Password"
             suffixIcon={images.eyeIcon}
             keyboardType="default"
-            secureTextEntry
+            secureTextEntry={isSecureCheck ? true : false}
             suffixIconStyle={{width: 24, height: 26.4}}
+           
+            eyeSource={
+              isSecureCheck
+                ? images.eyeIcon
+                : images.eyeIconHide
+            }
+            eye
+            eyePress={() => setIsSecureCheck(!isSecureCheck)}
           />
+          
 
           <View style={styles.forgotPassword}>
             <View style={styles.remembrCheckbox}>
@@ -52,16 +107,16 @@ const LoginScreen = ({navigation}) => {
                 onPress={() => setIsChecked(!isChecked)}>
                 {isChecked && <Text style={styles.tickMark}>✓</Text>}
               </TouchableOpacity>
-              <Text style={styles.rememberText}> Remember me</Text>
+              <Text style={styles.rememberText}>{Strings.rememberMe}</Text>
             </View>
             <TouchableOpacity onPress={''}>
-              <Text style={styles.forgotText}>Forgot password?</Text>
+              <Text style={styles.forgotText}>{Strings.forgotPassword}</Text>
             </TouchableOpacity>
           </View>
 
           <TouchableOpacity
             style={styles.registerButton}
-            onPress={() => navigation.navigate('Dashboard')}>
+            onPress={handleRegisterPress}>
             <LinearGradient
               start={{x: 0.0, y: 0.5}}
               end={{x: 1.0, y: 0.5}}
@@ -74,7 +129,7 @@ const LoginScreen = ({navigation}) => {
 
           <View style={styles.lineRow}>
             <Image source={images.line2} />
-            <Text style={styles.lineBtwnText}>Or log in with</Text>
+            <Text style={styles.lineBtwnText}>{Strings.orLogInWith}</Text>
             <Image source={images.line2} />
           </View>
 
@@ -101,7 +156,7 @@ const LoginScreen = ({navigation}) => {
         <View style={styles.footer}>
           <Text style={styles.footerText1}>{Strings.termsTxt}</Text>
           <TouchableOpacity>
-            <Text style={styles.footerText2}>Privacy Policy</Text>
+            <Text style={styles.footerText2}>{Strings.privacyPolicy}</Text>
           </TouchableOpacity>
         </View>
       </View>

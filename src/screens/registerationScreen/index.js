@@ -19,16 +19,16 @@ const RegisterationScreen = ({navigation}) => {
   const [isSecure, setIsSecure] = useState(false);
   const [isSecureCheck, setIsSecureCheck] = useState(false);
 
-  const ref_input2 = useRef();
-  const ref_input3 = useRef();
-  const ref_input4 = useRef();
-  const ref_input5 = useRef();
+  // const ref_input2 = useRef();
+  // const ref_input3 = useRef();
+  // const ref_input4 = useRef();
+  // const ref_input5 = useRef();
   return (
     // <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
         <View style={styles.mainBody}>
-          <Text style={styles.startedText}>Get started</Text>
-          <Text style={styles.freeAccText}>by creating free account</Text>
+          <Text style={styles.startedText}>{Strings.getStarted}</Text>
+          <Text style={styles.freeAccText}>{Strings.byCreatingYourAccount}</Text>
 
           <View style={styles.content}>
             <CustomTextInput
@@ -97,16 +97,16 @@ const RegisterationScreen = ({navigation}) => {
               value={repeatPassword}
               onChangeText={setRepeatPassword}
               placeholder="Repeat Password"
+              keyboardType="default"
+              secureTextEntry={isSecure ? true : false}
+              eyePress={() => setIsSecure(!isSecure)}
+              suffixIconStyle={{width: 24, height: 26.4}}
+              eye
               eyeSource={
                 isSecure
                 ? images.eyeIcon
                 : images.eyeIconHide
               }
-              keyboardType="default"
-              secureTextEntry={isSecure ? true : false}
-              eye
-              eyePress={() => setIsSecure(!isSecure)}
-              suffixIconStyle={{width: 24, height: 26.4}}
             />
 
             <View style={styles.remembrCheckbox}>
@@ -116,9 +116,9 @@ const RegisterationScreen = ({navigation}) => {
                 {isChecked && <Text style={styles.tickMark}>✓</Text>}
               </TouchableOpacity>
               <Text style={styles.rememberText}>
-                {' '}
-                By checking the box you agree to our{' '}
-                <Text style={styles.terms}>Terms & Conditions</Text>
+               
+               {Strings.byCheckingTheBox}
+                <Text style={styles.terms}>{Strings.termsAndConditions}</Text>
               </Text>
             </View>
             <TouchableOpacity
@@ -130,7 +130,7 @@ const RegisterationScreen = ({navigation}) => {
                 locations={[0, 0.5]}
                 colors={['#34F5C5', '#1DCDFE']}
                 style={styles.linearGradient}>
-                <Text style={styles.buttonText}>Next</Text>
+                <Text style={styles.buttonText}>{Strings.next}</Text>
               </LinearGradient>
             </TouchableOpacity>
             <View style={styles.loginText}>

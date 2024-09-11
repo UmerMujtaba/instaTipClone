@@ -12,6 +12,8 @@ import {BlurView} from '@react-native-community/blur';
 import styles from './styles';
 import {useFocusEffect} from '@react-navigation/native';   
 import {images} from '../../assets/images';
+import Strings from '../../constants/strings';
+
 
 const data = [
   {key: '1', earned: '$60.00', mainHeading: 'Earned Today'},
@@ -162,7 +164,7 @@ const DashboardScreen = ({navigation, route}) => {
           <View style={styles.imageAvatar}>
             <Image source={images.userImages} style={styles.imageAvatar} />
           </View>
-          <Text style={styles.nameText}>Hi, John</Text>
+          <Text style={styles.nameText}>{Strings.greetings}</Text>
         </View>
         <TouchableOpacity>
         <View style={styles.notificationImageContainer}>
@@ -382,8 +384,8 @@ const DashboardScreen = ({navigation, route}) => {
             styles.EarningText
             
           }>
-          You'll find your earnings {'\n'} details{' '}
-          <Text style={{color: '#29E2E0'}}>here</Text>.
+         {Strings.youWillFindYourDetails}
+          <Text style={{color: '#29E2E0'}}>{Strings.here}</Text>.
         </Text>
 
         {/* Image */}
