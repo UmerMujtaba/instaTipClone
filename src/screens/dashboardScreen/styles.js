@@ -26,6 +26,7 @@ export default StyleSheet.create({
   },
   nameImage: {
     flexDirection: 'row',
+    
   },
   nameText: {
 

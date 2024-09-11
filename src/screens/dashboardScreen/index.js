@@ -7,6 +7,7 @@ import {
   ImageBackground,
   TouchableOpacity,
   FlatList,
+  StatusBar
 } from 'react-native';
 import {BlurView} from '@react-native-community/blur';
 import styles from './styles';
@@ -158,6 +159,7 @@ const DashboardScreen = ({navigation, route}) => {
 
   return (
     <View style={styles.container}>
+        <StatusBar translucent backgroundColor="transparent" />
       {/* Appbar */}
       <View style={styles.appbarStyle}>
         <View style={styles.nameImage}>

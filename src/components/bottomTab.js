@@ -6,10 +6,11 @@ import {children} from 'react';
 import WalletScreen from '../screens/WalletScreen';
 import QRCode from '../screens/QRCode';
 import ProfileScreen from '../screens/ProfileScreen';
-import MenuScreen from '../screens/MenuScreen';
+
 import {View, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { images } from '../assets/images';
+import MenuScreen from '../screens/menuScreen';
 
 const Tab = createBottomTabNavigator();
 

@@ -88,6 +88,7 @@
 		D4294E6D61904631B9E0E37A /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AF50F0318EF476AB425D648 /* Inter-SemiBold.ttf */; };
 		F25CD961DACC4F808524B11A /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = E8A17121158C4E6B91F44CA1 /* OFL.txt */; };
 		52F83E9FD02F43B5A6957E5C /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = C4ADC75B2A024CEEBAAF9A26 /* README.txt */; };
+		2A35AFB87627417CB0A22667 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EB0CB7A9B36416392F2B321 /* Inter-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +194,7 @@
 		1AF50F0318EF476AB425D648 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; name = "Inter-SemiBold.ttf"; path = "../src/assets/fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		E8A17121158C4E6B91F44CA1 /* OFL.txt */ = {isa = PBXFileReference; name = "OFL.txt"; path = "../src/assets/fonts/Inter/OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		C4ADC75B2A024CEEBAAF9A26 /* README.txt */ = {isa = PBXFileReference; name = "README.txt"; path = "../src/assets/fonts/Inter/README.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6EB0CB7A9B36416392F2B321 /* Inter-Medium.ttf */ = {isa = PBXFileReference; name = "Inter-Medium.ttf"; path = "../src/assets/fonts/Inter-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +378,7 @@
 				1AF50F0318EF476AB425D648 /* Inter-SemiBold.ttf */,
 				E8A17121158C4E6B91F44CA1 /* OFL.txt */,
 				C4ADC75B2A024CEEBAAF9A26 /* README.txt */,
+				6EB0CB7A9B36416392F2B321 /* Inter-Medium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				D4294E6D61904631B9E0E37A /* Inter-SemiBold.ttf in Resources */,
 				F25CD961DACC4F808524B11A /* OFL.txt in Resources */,
 				52F83E9FD02F43B5A6957E5C /* README.txt in Resources */,
+				2A35AFB87627417CB0A22667 /* Inter-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

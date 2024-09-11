@@ -18,7 +18,17 @@ next:'Next',
 byCheckingTheBox: ' By checking the box you agree to our ',
 termsAndConditions:'Terms & Conditions',
 getStarted:'Get started',
-byCreatingYourAccount:'by creating free account'
+byCreatingYourAccount:'by creating free account',
+menu:'Menu',
+personalDetails:'Personal details',
+address:'Address',
+bankAccount:'Bank Account',
+passwordAndSecurity:'Password and Security',
+languageAndCurrency:'Language & Currency',
+userGuide:'User Guide',
+support:'Support',
+logout:'Log out',
+
 };
 
 export default Strings

@@ -29,5 +29,18 @@ export const images = {
   userGroup: require('./usergroup.png'),
   menuIcon: require('./menu.png'),
   crossIcon: require('./cross.png'),
- 
+  menuIconFilled: require('./menuiconfilled.png'),
+  menuTopBgImage: require('./menutopbg.png'),
+  
+  languageIcon: require('./languageicon.png'),
+  logoutIcon: require('./logouticon.png'),
+  personalDetailIcon: require('./personaldetailsicon.png'),
+  addressIcon: require('./addressicon.png'),
+  bankIcon: require('./bankicon.png'),
+  policyIcon: require('./policyicon.png'),
+  securityIcon: require('./securityicon.png'),
+  supportIcon: require('./supporticon.png'),
+  termsIcon: require('./termsicon.png'),
+  usergGuideIcon: require('./userguideicon.png'),
+
 };

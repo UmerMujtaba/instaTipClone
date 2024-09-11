@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 import fonts from '../../constants/fonts';
 
 import {hp, rfs, rhp, rwp, wp} from '../../constants/dimensions';
