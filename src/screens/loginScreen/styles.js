@@ -9,6 +9,13 @@ export default StyleSheet.create({
     backgroundColor: '#213142',
     flex: 1,
   },
+ 
+    errorText: {
+      color: 'red',
+      marginTop: 5,
+      marginBottom: 10,
+    
+  },
   backImage: {
     width: 10.26,
     height: 20,
@@ -90,22 +97,7 @@ export default StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center',
   },
-  buttonText: {
-    color: '#213142',
-   // fontWeight: 'bold',
-  
-    fontSize: 20,
-    textAlign: 'center',
-    fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
-  },
-  linearGradient: {
-    borderRadius: 5,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 5,
-    width: '100%',
-    height: '100%',
-  },
+ 
   lineRow: {
     flexDirection: 'row',
     alignItems: 'center',

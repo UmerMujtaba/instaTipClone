@@ -1,8 +1,7 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import fonts from '../../constants/fonts';
 
-const {width} = Dimensions.get('window');
-const {height} = Dimensions.get('window');
+import {hp, rfs, rhp, rwp, wp} from '../../constants/dimensions';
 
 export default StyleSheet.create({
   container: {
@@ -13,24 +12,25 @@ export default StyleSheet.create({
   },
   frameStyle: {
     position: 'absolute',
-    width: '100%',
-    height: '100%',
+    width: wp(100),
+    height: hp(100),
   },
 
   carouselWrapper: {
-    height: height * 0.65, // Takes half the screen height for the carousel
-    justifyContent: 'center', // Vertically centers the carousel
-    alignItems: 'center', // Horizontally centers the carousel
+   // backgroundColor: 'pink',
+    height: rhp(500), // Takes half the screen height for the carousel
+    //justifyContent: 'center', // Vertically centers the carousel
+    //alignItems: 'center', // Horizontally centers the carousel
     overflow: 'hidden',
   },
   carouselImage: {
-    width: width * 0.65,  // Adjust width based on itemWidth
-    height: height * 0.4,  // Adjust height
+    width: rwp(200.48),  // Adjust width based on itemWidth
+    height:rhp(279.99)  ,// Adjust height
     resizeMode: 'contain',
   },
 
   carouselTitle: {
-    marginTop: 20,
+    marginTop: 10,
     fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
 
     // fontFamily: fonts.SF_PRO_TEXT.Outfit.SemiBold,
@@ -42,9 +42,9 @@ export default StyleSheet.create({
   },
 
   registerButton: {
-    marginTop: 30,
-    width: 302,
-    height: 45,
+    marginTop: 20,
+    width: rwp(315),
+    height: rhp(50),
     borderRadius: 5,
     justifyContent: 'center',
   },
@@ -61,7 +61,7 @@ export default StyleSheet.create({
     alignItems: 'center',
     paddingVertical: 10,
     width: '100%',
-    height: '100%',
+    height:'100%',
   },
   lineRow: {
     flexDirection: 'row',
@@ -92,14 +92,14 @@ export default StyleSheet.create({
     fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
   },
   activeDot: {
-    width: 6.11,
-    height: 6,
+    width: rwp(6.11),
+    height: rhp(6),
     borderRadius: 6,
     backgroundColor: '#1DCDFE',
   },
   inactiveDot: {
-    width: 6.11,
-    height: 6,
+    width: rwp(6.11),
+    height: rhp(6),
     borderRadius: 5,
     backgroundColor: 'grey',
   },

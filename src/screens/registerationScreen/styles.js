@@ -1,13 +1,18 @@
 import {StyleSheet, Dimensions} from 'react-native';
 import fonts from '../../constants/fonts';
 
-const {width} = Dimensions.get('window');
-const {height} = Dimensions.get('window');
+import {hp, rfs, rhp, rwp, width, wp} from '../../constants/dimensions';
 
 export default StyleSheet.create({
   container: {
     backgroundColor: '#213142',
     flex: 1,
+  },
+  errorText: {
+    color: 'red',
+    //marginTop: 2,
+    marginBottom: 5,
+    textAlign:'center'
   },
   mainBody: {
     justifyContent: 'center',
@@ -16,18 +21,18 @@ export default StyleSheet.create({
   },
   startedText: {
     fontFamily: fonts.SF_PRO_TEXT.inter.SemiBold,
-    fontSize: 30,
+    fontSize: rfs(36),
     color: '#FFFFFF',
   },
   freeAccText: {
     fontFamily: fonts.SF_PRO_TEXT.inter.Regular,
-    fontSize: 18,
+    fontSize: rfs(23),
     color: '#FFFFFF',
     marginBottom: 40,
   },
   content: {
-    width: 331,
-    height: 608,
+    width: rwp(350),
+    //height: rwp(620),
   },
   checkbox: {
     width: 13.07,
@@ -69,21 +74,6 @@ export default StyleSheet.create({
     height: 45,
     borderRadius: 8,
     justifyContent: 'center',
-  },
-  buttonText: {
-    color: '#213142',
-    //fontWeight: 'bold',
-    fontSize: 18,
-    textAlign: 'center',
-    fontFamily: fonts.SF_PRO_TEXT.inter.SemiBold,
-  },
-  linearGradient: {
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingVertical: 10,
-    width: '100%',
-    height: '100%',
   },
   loginText: {
     flexDirection: 'row',

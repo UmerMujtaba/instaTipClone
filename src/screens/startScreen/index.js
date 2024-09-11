@@ -15,7 +15,7 @@ import data from '../../utils/startScreenData';
 import Strings from '../../constants/strings';
 
 import { images } from '../../assets/images';
-const {width} = Dimensions.get('window');
+import {hp, rfs, rhp, rwp, width, wp} from '../../constants/dimensions';
 
 const renderItem3 = ({item}) => {
   return (
@@ -46,7 +46,7 @@ const FirstScreen = ({navigation}) => {
           data={data}
           renderItem={renderItem3}
           sliderWidth={width}
-          itemWidth={248.46} // Reduce itemWidth so only the active item is fully visible
+          itemWidth={rwp(248.46)} // Reduce itemWidth so only the active item is fully visible
           inactiveSlideScale={0} // Scale down non-active slides
         />
         <Pagination
