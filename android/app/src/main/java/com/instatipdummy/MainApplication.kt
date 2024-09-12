@@ -1,4 +1,4 @@
-package com.instatip
+package com.instatipdummy
 
 import android.app.Application
 import com.facebook.react.PackageList

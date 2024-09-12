@@ -1,9 +1,9 @@
-import { View, Text, ImageBackground, Image, TouchableOpacity, ScrollView } from 'react-native'
-import React from 'react'
+import { View, Text, ImageBackground, Image, TouchableOpacity, ScrollView,Alert } from 'react-native'
+import React,{useEffect} from 'react'
 import styles from './styles'
 import { images } from '../../assets/images'
 import MenuTile from '../../components/menuTile'
-
+import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-signin';
 import { useTranslation } from 'react-i18next';
 
 import i18next, { languageResources } from '../../../src/localization/i18n'
@@ -11,6 +11,30 @@ import i18next, { languageResources } from '../../../src/localization/i18n'
 
 const MenuScreen = ({navigation}) => {
   const { t, i18n } = useTranslation();
+  useEffect(() => {
+    GoogleSignin.configure({
+       webClientId : "430210225303-df0gv59djhjmno104qgltc4on576skb6.apps.googleusercontent.com"
+    });
+  }, []);
+  
+  // Sign out function
+  const handleSignOut = async () => {
+    try {
+      await GoogleSignin.revokeAccess();
+      await GoogleSignin.signOut();
+      
+     
+      console.log("🚀 ~ handleSignOut ~ User signed out successfully:", console)
+      Alert.alert('Success', 'You have been logged out.');
+      navigation.navigate('Login'); // Navigate back to the login screen
+    } catch (error) {
+      console.error('Sign out error: ', error);
+      Alert.alert('Sign-Out Error', 'An error occurred while signing out.');
+    }
+     
+  };
+
+
   return (
     <View style={styles.container}>
       <ImageBackground source={images.menuTopBgImage} resizeMode='cover' style={styles.topBgImage} >
@@ -109,7 +133,7 @@ const MenuScreen = ({navigation}) => {
           iconSource={images.logoutIcon}
           label={t('logout')}
           onPress={() => {
-            // Define onPress action here
+            handleSignOut()
           }}
         />
        </ScrollView>

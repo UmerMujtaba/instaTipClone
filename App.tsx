@@ -19,7 +19,7 @@ const App = () => {
   return (
     <I18nextProvider i18n={i18n}>
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Dashboard'>
+      <Stack.Navigator initialRouteName='Login'>
         <Stack.Screen name="tutorial" component={TutorialScreen}  options={{ headerShown: false }} />
         <Stack.Screen name="Login" component={LoginScreen}   options={{ headerShown: false }}/>
         <Stack.Screen name="Register" component={RegisterationScreen}   options={{ headerShown: false }}/>
