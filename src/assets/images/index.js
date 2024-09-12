@@ -31,7 +31,6 @@ export const images = {
   crossIcon: require('./cross.png'),
   menuIconFilled: require('./menuiconfilled.png'),
   menuTopBgImage: require('./menutopbg.png'),
-  
   languageIcon: require('./languageicon.png'),
   logoutIcon: require('./logouticon.png'),
   personalDetailIcon: require('./personaldetailsicon.png'),
@@ -42,5 +41,8 @@ export const images = {
   supportIcon: require('./supporticon.png'),
   termsIcon: require('./termsicon.png'),
   usergGuideIcon: require('./userguideicon.png'),
-
+  editIcon: require('./editicon.png'),
+  spainFlag:require('./flags/spainflag.png'),
+  franceFlag: require('./flags/franceflag.png'),
+  ukFlag: require('./flags/ukflag.png'),
 };

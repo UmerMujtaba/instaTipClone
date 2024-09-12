@@ -24,13 +24,13 @@ export default StyleSheet.create({
     overflow: 'hidden',
   },
   carouselImage: {
-    width: rwp(200.48),  // Adjust width based on itemWidth
+    width: rwp(230.48),  // Adjust width based on itemWidth
     height:rhp(279.99)  ,// Adjust height
     resizeMode: 'contain',
   },
 
   carouselTitle: {
-    marginTop: 10,
+    marginTop: 5,
     fontFamily:fonts.SF_PRO_TEXT.inter.SemiBold,
 
     // fontFamily: fonts.SF_PRO_TEXT.Outfit.SemiBold,

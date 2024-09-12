@@ -44,14 +44,14 @@ const CustomTextInput = ({
           resizeMode="contain"
           source={imageSource}
         />
-      )}
+      )} 
       {eye && (
         <TouchableOpacity onPress={eyePress}>
           <Image
             style={[styles.icon, suffixIconStyle]}
             resizeMode="contain"
             source={eyeSource}
-          />
+          /> 
         </TouchableOpacity>
       )}
     </View>
