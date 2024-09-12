@@ -6,6 +6,7 @@ import { images } from '../../assets/images';
 import styles from './styles';
 import { hp, rhp, rwp, wp } from '../../constants/dimensions';
 import CustomDropDownPicker from '../../components/customDropDownPicker';
+import fonts from '../../constants/fonts';
 
 const LanguageScreen = ({ navigation }) => {
   const { t, i18n } = useTranslation();
@@ -21,10 +22,19 @@ const LanguageScreen = ({ navigation }) => {
   const [openCountryDropDown, setOpenCountryDropDown] = useState(false);
   const [countryValue, setCountryValue] = useState(null);
   const [countryItems, setCountryItems] = useState([
-    { label: '🇬🇧  United Kingdom', value: 'gb', image: images.ukFlag },
-    { label: '🇪🇸  Spain', value: 'es', image: images.spainFlag },
-    { label: '🇫🇷  France', value: 'fr', image: images.franceFlag },
+    { label: '🇬🇧  United Kingdom', value: 'UK'},
+    { label: '🇪🇸  Spain', value: 'SP',},
+    { label: '🇫🇷  France', value: 'FR'},
   ]);
+
+  const [openCurrencyDropDown, setopenCurrencyDropDown] = useState(false);
+  const [currencyValue, setcurrencyValue] = useState(null);
+  const [currencyItems, setcurrencyItems] = useState([
+    { label: '£  British Pound', value: 'UK pound'},
+    { label: '$  USA Dollar', value: 'US Dolloar' },
+    { label: '€  Euro', value: 'Spain Euro'},
+  ]);
+
 
   useEffect(() => {
     // Set the initial value based on the current language
@@ -74,7 +84,9 @@ const LanguageScreen = ({ navigation }) => {
       </View>
 
       {/* Language DropDown */}
-      <View style={{ backgroundColor: 'skyblue', height: rhp(400), width: rwp, marginLeft: 10, marginRight: 10 }}>
+      <View style={{ position: 'relative', width: rwp, marginLeft: 10, marginRight: 10 , marginTop: 10}}>
+        {/* Language Dropdown Label and Dropdown */}
+        <Text style={{ color: 'white', fontSize: 14, fontFamily: fonts.SF_PRO_TEXT.inter.Regular,  }}>Language</Text>
         <CustomDropDownPicker
           open={openLanguageDropDown}
           value={languageValue}
@@ -84,29 +96,105 @@ const LanguageScreen = ({ navigation }) => {
           setItems={setLanguageItems}
           onChangeValue={changeLanguage}
           placeholder="Select language"
-          containerStyle={{ width: wp(95), borderColor: 'transparent' }}
-          style={{ backgroundColor: '#2F455C', borderColor: 'transparent', height: 45, borderRadius: 8, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10 }}
+          containerStyle={{
+            width: wp(95),
+            borderColor: 'transparent',
+            position: 'absolute',
+            top: 28, // Adjust this value to ensure visibility
+            zIndex: 3,
+            marginTop: 0
+          }}
+          style={{
+            backgroundColor: '#2F455C',
+            borderColor: 'transparent',
+            height: 45,
+            borderRadius: 8,
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingHorizontal: 10,
+          }}
           textStyle={{ color: 'lightgrey', fontSize: 14 }}
-          dropDownContainerStyle={{ backgroundColor: '#2F455C', borderColor: 'transparent', borderRadius: 8 }}
+          dropDownContainerStyle={{
+            backgroundColor: '#2F455C',
+            borderColor: 'transparent',
+            borderRadius: 8,
+          }}
         />
-       
-          <CustomDropDownPicker
-            open={openCountryDropDown}
-            value={countryValue} 
-            items={countryItems}
-            setOpen={setOpenCountryDropDown}
-            setValue={setCountryValue}
-            setItems={setCountryItems}
-            onChangeValue={(value) => console.log(value)} // Handle country selection
-            placeholder="Select country"
-            containerStyle={{ width: wp(95), borderColor: 'transparent' ,marginTop: '40%'}}
-            style={{ backgroundColor: '#2F455C', borderColor: 'transparent', height: 45, borderRadius: 8, flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10 }}
-            textStyle={{ color: 'lightgrey', fontSize: 14 }}
-            dropDownContainerStyle={{ backgroundColor: '#2F455C', borderColor: 'transparent', borderRadius: 8 }}
-            
-          />
-       
+
+        {/* Country Dropdown Label and Dropdown */}
+        <Text style={{ color: 'white', fontSize: 14, fontFamily: fonts.SF_PRO_TEXT.inter.Regular, marginTop: '20%' }}>Country</Text>
+        <CustomDropDownPicker
+          open={openCountryDropDown}
+          value={countryValue}
+          items={countryItems}
+          setOpen={setOpenCountryDropDown}
+          setValue={setCountryValue}
+          setItems={setCountryItems}
+          onChangeValue={(value) => console.log('Selected Country:', value)}
+          placeholder="Select country"
+          containerStyle={{
+            width: wp(95),
+            borderColor: 'transparent',
+            position: 'absolute',
+            top: 100, // Adjust this value to ensure visibility below the language dropdown
+            zIndex: 2,
+            marginTop: '4%' // Ensure this is below the language dropdown
+          }}
+          style={{
+            backgroundColor: '#2F455C',
+            borderColor: 'transparent',
+            height: 45,
+            borderRadius: 8,
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingHorizontal: 10,
+          }}
+          textStyle={{ color: 'lightgrey', fontSize: 14 }}
+          dropDownContainerStyle={{
+            backgroundColor: '#2F455C',
+            borderColor: 'transparent',
+            borderRadius: 8,
+          }}
+        />
+
+<Text style={{ color: 'white', fontSize: 14, fontFamily: fonts.SF_PRO_TEXT.inter.Regular,marginTop: '20%' }}>Currency</Text>
+        <CustomDropDownPicker
+          open={openCurrencyDropDown}
+          value={currencyValue}
+          items={currencyItems}
+          setOpen={setopenCurrencyDropDown}
+          setValue={setcurrencyValue}
+          setItems={setcurrencyItems}
+          onChangeValue={(value) => console.log('Selected Currency:', value)}
+          placeholder="Select Currency"
+          containerStyle={{
+            width: wp(95),
+            borderColor: 'transparent',
+            position: 'absolute',
+            top: 100, // Adjust this value to ensure visibility below the language dropdown
+            zIndex: 1,
+            marginTop: '29%' // Ensure this is below the language dropdown
+          }}
+          style={{
+            backgroundColor: '#2F455C',
+            borderColor: 'transparent',
+            height: 45,
+            borderRadius: 8,
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingHorizontal: 10,
+          }}
+          textStyle={{ color: 'lightgrey', fontSize: 14 }}
+          dropDownContainerStyle={{
+            backgroundColor: '#2F455C',
+            borderColor: 'transparent',
+            borderRadius: 8,
+          }}
+        />
       </View>
+
+
+
     </View>
   );
 };
