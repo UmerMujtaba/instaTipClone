@@ -37,9 +37,9 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   logoImage: {
-    width: 171,
-    height: 62.4,
-    marginBottom: 90,
+    width: 180,
+    height: 74,
+    marginBottom: 80,
   },
   mainContent: {
     
@@ -111,7 +111,7 @@ export default StyleSheet.create({
   },
   socialMediaIcons: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    //justifyContent: 'space-between',
     width: 320,
     marginTop: 20,
   },

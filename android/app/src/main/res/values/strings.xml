@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">instatip</string>
+    
+    <string name="facebook_app_id">492915850266422</string>
+    <string name="fb_login_protocol_scheme">fb492915850266422</string>
+    <string name="facebook_client_token">308a54e99ce0bbc7e39526d63db70c4c</string>
+
+
 </resources>
