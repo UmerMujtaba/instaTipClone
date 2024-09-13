@@ -45,4 +45,11 @@ export const images = {
   spainFlag:require('./flags/spainflag.png'),
   franceFlag: require('./flags/franceflag.png'),
   ukFlag: require('./flags/ukflag.png'),
+  closeIcon: require('./closeicon.png'),
+  guideTag1: require('./guidetag1.png'),
+  guideTag2: require('./guidetag2.png'),
+  guideTag3: require('./guidetag3.png'),
+  guideTag4: require('./guidetag4.png'),
+  guideTag5: require('./guidetag5.png'),
+
 };

@@ -1,21 +1,25 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import DashboardScreen from '../screens/dashboardScreen';
+
 import {height, width} from '../constants/dimensions';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 import {children} from 'react';
-import WalletScreen from '../screens/WalletScreen';
-import QRCode from '../screens/QRCode';
-import ProfileScreen from '../screens/ProfileScreen';
+import WalletScreen from '../screens/bottom/walletScreen';
+import QRCode from '../screens/bottom/qrCodeScreen';
+import ProfileScreen from '../screens/bottom/profileScreen';
 
 import {View, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { images } from '../assets/images';
-import MenuScreen from '../screens/menuScreen';
+import MenuOptionsScreen from '../screens/bottom/menuScreen';
+import DashboardScreen from '../screens/bottom/dashboardScreen';
+
+
 
 const Tab = createBottomTabNavigator();
 
 const CustomTabBarButton = ({children, onPress}) => (
   <TouchableOpacity
+   
     onPress={onPress}
     style={{
       top: -30,
@@ -132,6 +136,7 @@ const Tabs = () => (
       options={{
         headerShown: false,
         tabBarIcon: ({focused}) => (
+          
           <Image
             source={images.qrCodeIcon}
             resizeMode="contain"
@@ -183,7 +188,7 @@ const Tabs = () => (
     />
     <Tab.Screen
       name="Menu"
-      component={MenuScreen}
+      component={MenuOptionsScreen}
       options={{
         headerShown: false,
 
