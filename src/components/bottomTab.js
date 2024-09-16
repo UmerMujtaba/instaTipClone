@@ -12,6 +12,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { images } from '../assets/images';
 import MenuOptionsScreen from '../screens/bottom/menuScreen';
 import DashboardScreen from '../screens/bottom/dashboardScreen';
+import MenuStackNavigator from '../navigator/buttomStack/menuStack';
 
 
 
@@ -188,7 +189,8 @@ const Tabs = () => (
     />
     <Tab.Screen
       name="Menu"
-      component={MenuOptionsScreen}
+      // component={MenuOptionsScreen}
+      component={MenuStackNavigator}
       options={{
         headerShown: false,
 

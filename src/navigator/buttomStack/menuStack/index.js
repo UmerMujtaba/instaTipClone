@@ -9,54 +9,60 @@ import PasswordAndSecurityScreen from '../../../screens/bottom/passwordAndSecuri
 import SupportScreen from '../../../screens/bottom/supportScreen';
 import TermsAndConditionsScreen from '../../../screens/bottom/termsAndConditionsScreen';
 import PrivacyPolicyScreen from '../../../screens/bottom/privacyPolicyScreen';
+import MenuOptionsScreen from '../../../screens/bottom/menuScreen';
 
 const MenuStack = createNativeStackNavigator();
 
 const MenuStackNavigator = () => {
   return (
-    <MenuStack.Navigator>
+    <MenuStack.Navigator initialRouteName='MenuOptionsScreen'>
       <MenuStack.Screen 
-        name="PersonalDetails" 
+        name="MenuOptionsScreen" 
+      component={MenuOptionsScreen}
+        options={{ headerShown: false }} 
+      />
+      <MenuStack.Screen 
+        name="PersonalDetailsS" 
         component={PersonalDetailsScreen} 
         options={{ headerShown: false }} 
       />
       <MenuStack.Screen 
-        name="Address" 
+        name="AddressS" 
         component={AddressScreen} 
         options={{ headerShown: false }} 
       />
       <MenuStack.Screen 
-        name="BankAcccount" 
+        name="BankAccountS" 
         component={BankAccountScreen} 
         options={{ headerShown: false }} 
       />
       <MenuStack.Screen 
-        name="passwordAndSecurity" 
+        name="PasswordAndSecuirtyS" 
         component={PasswordAndSecurityScreen} 
         options={{ headerShown: false }} 
       />
       <MenuStack.Screen 
-        name="language" 
+        name="Language" 
         component={LanguageScreen} 
         options={{ headerShown: false }} 
       />
       <MenuStack.Screen 
-        name="userGuide" 
+        name="UserGuideScreen" 
         component={UserGuideScreen} 
         options={{ headerShown: false }} 
       />
       <MenuStack.Screen 
-        name="support" 
+        name="SupportS" 
         component={SupportScreen} 
         options={{ headerShown: false }} 
       />
       <MenuStack.Screen 
-        name="termsAndConditions" 
+        name="TermsAndConditionsS" 
         component={TermsAndConditionsScreen} 
         options={{ headerShown: false }} 
       />
       <MenuStack.Screen 
-        name="privacyPolicyScreen" 
+        name="PrivacyS" 
         component={PrivacyPolicyScreen} 
         options={{ headerShown: false }} 
       />

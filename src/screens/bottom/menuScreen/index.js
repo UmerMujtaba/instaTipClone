@@ -70,14 +70,14 @@ const MenuOptionsScreen = ({navigation}) => {
           iconSource={images.personalDetailIcon}
           label={t('personalDetails')}
           onPress={() => {
-            // Define onPress action here
+            navigation.navigate('PersonalDetailsS')
           }}
         />
           <MenuTile
           iconSource={images.addressIcon}
           label={t('address')}
           onPress={() => {
-            // Define onPress action here
+            navigation.navigate('AddressS')
           }}
         />
           <MenuTile
@@ -85,13 +85,15 @@ const MenuOptionsScreen = ({navigation}) => {
           label={t('bankAccount')}
           onPress={() => {
             // Define onPress action here
+            navigation.navigate('BankAccountS')
+            
           }}
         />
           <MenuTile
           iconSource={images.securityIcon}
           label={t('passwordAndSecurity')}
           onPress={() => {
-            // Define onPress action here
+            navigation.navigate('PasswordAndSecuirtyS')
           }}
         />
          <MenuTile
@@ -113,21 +115,21 @@ const MenuOptionsScreen = ({navigation}) => {
           iconSource={images.supportIcon}
           label={t('support')}
           onPress={() => {
-            // Define onPress action here
+            navigation.navigate('SupportS')
           }}
         />
         <MenuTile
           iconSource={images.termsIcon}
           label={t('termsAndConditions')}
           onPress={() => {
-            // Define onPress action here
+            navigation.navigate('TermsAndConditionsS')
           }}
         />
         <MenuTile
           iconSource={images.policyIcon}
           label={t('privacyPolicy')}
           onPress={() => {
-            // Define onPress action here
+            navigation.navigate('PrivacyS')
           }}
         />
         <MenuTile
