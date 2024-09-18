@@ -1,5 +1,5 @@
 import { View, Text, Image, TextInput, ScrollView, TouchableWithoutFeedback, TouchableOpacity, Alert } from 'react-native'
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useRef, startTransition } from 'react'
 import AppBarWithMenu from '../../../components/appBar'
 import { images } from '../../../assets/images'
 import DatePicker from 'react-native-date-picker';
@@ -8,6 +8,7 @@ import CustomTextInput from '../../../components/textFields';
 import CountryPicker, { CountryCode } from 'react-native-country-picker-modal';
 import PhoneInput from 'react-native-phone-input'
 import DocumentPicker from 'react-native-document-picker';
+import styles from './styles';
 
 
 
@@ -110,7 +111,7 @@ const PersonalDetailsScreen = ({ navigation }) => {
 
   return (
 
-    <View style={{ backgroundColor: '#213142', flex: 1 }}>
+    <View style={styles.container}>
       <AppBarWithMenu
         onBackPress={() => navigation.goBack()}
         onEditPress={() => console.log("Edit Pressed")}
@@ -120,16 +121,16 @@ const PersonalDetailsScreen = ({ navigation }) => {
       />
 
       <ScrollView>
-        <View style={{ marginLeft: 10, marginRight: 10, height: 600, marginTop: 10 }}>
+        <View style={styles.mainBody}>
 
 
 
           {/* name and surname */}
-          <View style={{ width: 'auto', height: 80, flexDirection: 'row', justifyContent: 'space-between', }}>
-            <View style={{ width: 160, height: 60, flexDirection: 'column' }}>
+          <View style={styles.nameContainer}>
+            <View style={styles.mainContainerCol}>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'flex-start', }}>
-                <Text style={{ color: '#97A2AD', fontSize: 14, paddingLeft: 10, marginBottom: 5 }}>Name </Text>
+              <View style={styles.mainContainerRow}>
+                <Text style={styles.heading}>Name </Text>
               </View>
               <CustomTextInput style={{ paddingHorizontal: 10, }}
                 value={surName}
@@ -141,10 +142,10 @@ const PersonalDetailsScreen = ({ navigation }) => {
               />
             </View>
 
-            <View style={{ width: 160, height: 60, flexDirection: 'column' }}>
+            <View style={styles.mainContainerCol}>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'flex-start', }}>
-                <Text style={{ color: '#97A2AD', fontSize: 14, paddingLeft: 10, marginBottom: 5 }}>Surname </Text>
+              <View style={styles.mainContainerRow}>
+                <Text style={styles.heading}>Surname </Text>
               </View>
               <CustomTextInput style={{ paddingHorizontal: 10, }}
                 value={name}
@@ -161,11 +162,11 @@ const PersonalDetailsScreen = ({ navigation }) => {
 
           {/* gender and date of birth  */}
 
-          <View style={{ width: 'auto', height: 80, flexDirection: 'row', justifyContent: 'space-between' }}>
-            <View style={{ width: 160, height: 60, flexDirection: 'column' }}>
+          <View style={styles.nameContainer}>
+            <View style={styles.mainContainerCol}>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'flex-start', }}>
-                <Text style={{ color: '#97A2AD', fontSize: 14, paddingLeft: 10, marginBottom: 5 }}>Gender </Text>
+              <View style={styles.mainContainerRow}>
+                <Text style={styles.heading}>Gender </Text>
               </View>
               <CustomTextInput style={{ paddingHorizontal: 10, }}
                 value={gender}
@@ -177,10 +178,10 @@ const PersonalDetailsScreen = ({ navigation }) => {
               />
             </View>
 
-            <View style={{ width: 160, height: 60, flexDirection: 'column' }}>
+            <View style={styles.mainContainerCol}>
 
-              <View style={{ flexDirection: 'row', justifyContent: 'flex-start', }}>
-                <Text style={{ color: '#97A2AD', fontSize: 14, paddingLeft: 10, marginBottom: 5 }}>Date of birth </Text>
+              <View style={styles.mainContainerRow}>
+                <Text style={styles.heading}>Date of birth </Text>
               </View>
               <CustomTextInput style={{ paddingHorizontal: 10, }}
 
@@ -212,40 +213,25 @@ const PersonalDetailsScreen = ({ navigation }) => {
 
 
           <View style={{ width: 'auto', height: 50, }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-start', }}>
-              <Text style={{ color: '#97A2AD', fontSize: 14, paddingLeft: 10, marginBottom: 5 }}>Nationality </Text>
+            <View style={styles.mainContainerRow}>
+              <Text style={styles.heading}>Nationality </Text>
             </View>
 
             <TouchableOpacity
               onPress={() => setShowCountryPicker(true)}
-              style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                borderRadius: 8,
-                paddingHorizontal: 16,
-                height: 45,
-                backgroundColor: '#2F455C',
-              }}
+              style={styles.countryContainer}
             >
               {/* Display the selected country flag */}
               {country && (
                 <Image
                   source={{ uri: `https://flagcdn.com/w40/${country.cca2.toLowerCase()}.png` }} // Flag image URL
-                  style={{
-                    width: 30,
-                    height: 20,
-                    marginRight: 10,
-                  }}
+                  style={styles.flagImage}
                 />
               )}
 
               {/* Country name display */}
               <TextInput
-                style={{
-                  flex: 1,
-                  fontSize: 16, color: 'white',
-                  // placeholder: "Select Country"
-                }}
+                style={styles.inputStyle}
                 value={displayText}
                 editable={false}
               />
@@ -268,20 +254,13 @@ const PersonalDetailsScreen = ({ navigation }) => {
 
           {/* phone number */}
 
-          <View style={{ width: 'auto', height: 90, }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-start', }}>
-              <Text style={{ color: '#97A2AD', fontSize: 14, paddingLeft: 10, marginBottom: 5, marginTop: 30 }}>Phone </Text>
+          <View style={{ width: 'auto', height: 70, marginTop: 30 ,}}>
+            <View style={styles.mainContainerRow}>
+
+              <Text style={styles.heading}>Phone </Text>
             </View>
 
-            <View style={{
-              justifyContent: 'center',
-              marginBottom: 5,
-              borderRadius: 8,
-              paddingHorizontal: 16,
-              height: 45,
-              backgroundColor: '#2F455C',
-              paddingRight: 10,
-            }}>
+            <View style={styles.phoneContainer}>
               <TouchableWithoutFeedback onPress={() => setShowPhoneCountryPicker(true)}>
                 <View>
                   <PhoneInput
@@ -311,9 +290,9 @@ const PersonalDetailsScreen = ({ navigation }) => {
           </View>
 
           {/* email */}
-          <View style={{ width: 'auto', height: 70, marginTop: 20 }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-start', }}>
-              <Text style={{ color: '#97A2AD', fontSize: 14, paddingLeft: 10, marginBottom: 5, }}>Email </Text>
+          <View style={{ width: 'auto', height: 65,marginTop: 10}}>
+            <View style={styles.mainContainerRow}>
+              <Text style={styles.heading}>Email </Text>
             </View>
 
             <CustomTextInput
@@ -331,21 +310,14 @@ const PersonalDetailsScreen = ({ navigation }) => {
           {/* document */}
 
 
-          <Image source={images.doumentTitle} resizeMode='cover' style={{ width: 'auto', height: 18, marginTop: 10, marginLeft: 10, marginRight: 10 }} />
+          <Image source={images.doumentTitle} resizeMode='cover' style={styles.docImage} />
 
           <View style={{ width: 'auto', height: 60, marginTop: 20 }}>
-            <View style={{ flexDirection: 'row', justifyContent: 'flex-start', }}>
-              <Text style={{ color: '#97A2AD', fontSize: 14, paddingLeft: 10, marginBottom: 5 }}>Upload personal identity document </Text>
+            <View style={styles.mainContainerRow}>
+              <Text style={styles.heading}>Upload personal identity document </Text>
             </View>
 
-            <View style={{
-              flexDirection: 'row',
-              alignItems: 'center',
-              borderRadius: 8,
-              paddingHorizontal: 10,
-              height: 45,
-              backgroundColor: '#2F455C',
-            }}>
+            <View style={styles.docContainer}>
               <TextInput
                 style={{
                   flex: 1,
@@ -364,11 +336,7 @@ const PersonalDetailsScreen = ({ navigation }) => {
                 marginLeft: 10,
                 padding: 5,
               }}>
-                <Image source={images.uploadIcon} style={{
-                  width: 24,
-                  height: 24,
-                  tintColor: '#29E2E0',
-                }} />
+                <Image source={images.uploadIcon} style={styles.uploadIconStyle} />
               </TouchableOpacity>
             </View>
 
