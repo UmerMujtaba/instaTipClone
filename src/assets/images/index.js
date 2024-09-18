@@ -54,4 +54,6 @@ export const images = {
   saveIcon: require('./saveicon.png'),
   userDetailIcon: require('./userdetailss.png'),
   calendarIcon: require('./calendar.png'),
+  doumentTitle: require('./doc.png'),
+  uploadIcon: require ('./upload.png'),
 };

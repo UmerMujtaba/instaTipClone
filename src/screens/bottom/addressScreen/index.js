@@ -1,7 +1,8 @@
-import { View, Text, Image, TextInput, ScrollView } from 'react-native'
+import { View, Text, Image, StyleSheet } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import AppBarWithMenu from '../../../components/appBar'
 import { images } from '../../../assets/images'
+
 
 import { useTranslation } from 'react-i18next';
 
@@ -19,6 +20,9 @@ const AddressScreen = ({ navigation }) => {
     i18n.changeLanguage(languageCode);
   };
 
+
+ 
+
   return (
     <View style={{ backgroundColor: '#213142', flex: 1 }}>
       <AppBarWithMenu
@@ -28,13 +32,11 @@ const AddressScreen = ({ navigation }) => {
         menuIcon={images.addressIcon}
         menuText={t('address')}
       />
+
+
+
     </View>
   )
 }
 export default AddressScreen
-
-
-
-
-
 
