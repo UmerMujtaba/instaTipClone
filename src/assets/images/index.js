@@ -51,5 +51,7 @@ export const images = {
   guideTag3: require('./guidetag3.png'),
   guideTag4: require('./guidetag4.png'),
   guideTag5: require('./guidetag5.png'),
-
+  saveIcon: require('./saveicon.png'),
+  userDetailIcon: require('./userdetailss.png'),
+  calendarIcon: require('./calendar.png'),
 };

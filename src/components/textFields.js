@@ -22,6 +22,7 @@ const CustomTextInput = ({
   onBlur,
   eyePress,
   keyboardType,
+  editable,
   ...props
 }) => {
   const toggleSecureEntry = () => {
@@ -35,6 +36,7 @@ const CustomTextInput = ({
         value={value}
         onChangeText={onChangeText}
         onBlur={onBlur}
+        editable={editable}
       keyboardType={keyboardType}
         style={{flex: 1}}
       />
